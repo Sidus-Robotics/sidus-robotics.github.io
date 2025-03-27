@@ -1,223 +1,336 @@
 ---
-// import { Image } from 'astro:assets';
-import Navigation from '../components/navigation.astro';
-import TeamPic from "../Images/Team_Photos/2025/Team/TeamPic.png"
-import Footer from '../components/footer.astro';
-import Arrow from "../Images/Misc/Arrow.png"
-import CIRC from "../Images/CIRC.svg"
-import Placeholder from "../Images/Misc/PlaceholderMember.png"
-import ASH from '../Images/Team_Photos/2025/Headshots/ash.png'
-import ALIF from "../Images/Team_Photos/2025/Headshots/alif.png"
-import ANNA from "../Images/Team_Photos/2025/Headshots/anna.png"
-import BRETT from "../Images/Team_Photos/2025/Headshots/brett.png"
-import EMMETT from '../Images/Team_Photos/2025/Headshots/emmett.png'
-import JAMES from '../Images/Team_Photos/2025/Headshots/james.png'
-import JANAYA from '../Images/Team_Photos/2025/Headshots/janaya.png'
-import LUCA from '../Images/Team_Photos/2025/Headshots/luca.png'
-import NICK from '../Images/Team_Photos/2025/Headshots/nick.png'
-import OMARI from '../Images/Team_Photos/2025/Headshots/omari.png'
-import SARTHAK from '../Images/Team_Photos/2025/Headshots/sarthak.png'
-import LinkedIn from "../Images/LinkedIn.svg"
-// import TEST from "../Images/Team_Photos/ash_wide.JPG"
-import "../styles/global.css"
-import "../styles/about.css"
+import Navigation from "../components/navigation.astro";
+import TeamPic from "../Images/Team_Photos/2025/Team/TeamPic.png";
+import Footer from "../components/footer.astro";
+import Arrow from "../Images/Misc/Arrow.png";
+import CIRC from "../Images/Misc/CIRC.svg";
+import Placeholder from "../Images/Misc/PlaceholderMember.png";
+import ASH from "../Images/Team_Photos/2025/Headshots/ash.png";
+import ALIF from "../Images/Team_Photos/2025/Headshots/alif.png";
+import ANNA from "../Images/Team_Photos/2025/Headshots/anna.png";
+import BRETT from "../Images/Team_Photos/2025/Headshots/brett.png";
+import EMMETT from "../Images/Team_Photos/2025/Headshots/emmett.png";
+import JAMES from "../Images/Team_Photos/2025/Headshots/james.png";
+import JANAYA from "../Images/Team_Photos/2025/Headshots/janaya.png";
+import LUCA from "../Images/Team_Photos/2025/Headshots/luca.png";
+import NICK from "../Images/Team_Photos/2025/Headshots/nick.png";
+import OMARI from "../Images/Team_Photos/2025/Headshots/omari.png";
+import SARTHAK from "../Images/Team_Photos/2025/Headshots/sarthak.png";
+import TIM from "../Images/Team_Photos/2025/Headshots/tim.png";
+import JAYLEN from "../Images/Team_Photos/2025/Headshots/jaylen.png";
+import ELI from "../Images/Team_Photos/2025/Headshots/eli.png";
+import CHENAL from "../Images/Team_Photos/2025/Headshots/Chenal.png";
+import MAIA from "../Images/Team_Photos/2025/Headshots/maia.png";
+import ASHMITA from "../Images/Team_Photos/2025/Headshots/ashmita.png";
+import LinkedIn from "../Images/Misc/LinkedIn.svg";
+import "../styles/global.css";
+import "../styles/about.css";
 ---
 
 <html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="preconnect" href="https://fonts.googleapis.com">
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-		<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
-		<link rel="icon" type="image/png" href="/favicon/favicon-96x96.png" sizes="96x96" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Sidus Robotics</title>
-		<script src="../components/lazyload.js" />
-	</head>
-	<body>
-        <Navigation/>
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      href="/favicon/favicon-96x96.png"
+      sizes="96x96"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Sidus Robotics</title>
+    <script src="../components/lazyload.js"></script>
+  </head>
+  <body>
+    <Navigation />
 
-		<section class="content-container" id="about-background">
+    <section class="content-container" id="about-background">
+      <div class="container">
+        <div id="arrow-animation">
+          <img src={Arrow.src} alt="" />
+        </div>
+      </div>
 
-			
-			<div id="arrow-animation">
-				<img src={Arrow.src} alt="">
-			</div>
-	
-			<div class="blur-load">
-				<img loading="lazy" src={TeamPic.src} alt="siduslogo.png" id="sidus-about">
-			</div>
-		
-			<div id="about-animation">
-				<h1 id="about1">ABOUT US</h1>
-				<h1 id="about2">ABOUT US</h1>
-				<h1 id="about3">ABOUT US</h1>
-			</div>
+      <div class="blur-load">
+        <img
+          loading="lazy"
+          src={TeamPic.src}
+          alt="siduslogo.png"
+          id="sidus-about"
+        />
+      </div>
 
-			<div id="teampic-blur"></div>
+      <div id="about-animation">
+        <h1 id="about1">ABOUT US</h1>
+        <h1 id="about2">ABOUT US</h1>
+        <h1 id="about3">ABOUT US</h1>
+      </div>
 
-		</section>
+      <div id="teampic-blur"></div>
+    </section>
 
-		<section class="content-container" id="about-main-content">
-			<h1>OUR MISSION</h1>
+    <section class="content-container" id="about-main-content">
+      <h1>OUR MISSION</h1>
 
-			<div>
-				<p>
-					Sidus Robotics is committed to advancing space robotics while providing students at Memorial University with valuable hands-on experience. Beyond skill development, our mission is to position Memorial University as a hub for innovation in robotics and space exploration. By competing in the Canadian International Rover Challenge (CIRC) we push the boundaries of research and technology. Teams participating in CIRC tackle real-world challenges by simulating early space settlement scenarios on extraterrestrial terrain, testing their rovers in dynamic and demanding environments. Depending on their chosen division, teams compete in either winter or summer events, proving their rover's capabilities in different conditions. Through this project, Sidus Robotics is not only preparing the next generation of engineers and innovators but also showcasing Newfoundland and Memorial University on the national stage.
-				</p>
-			</div>
-		</section>
-		
-		<section class="content-container" id="about-secondary-content">
-			<h1>UP AND COMING</h1>
+      <div>
+        <p>
+          Sidus Robotics is committed to advancing robotics in space while
+          providing students at Memorial University with valuable hands-on
+          experience. Beyond skill development, our mission is to position
+          Memorial University as a hub for innovation in robotics and space
+          exploration. By competing in the Canadian International Rover
+          Challenge (CIRC) we push the boundaries of research and technology.
+          Teams participating in CIRC tackle real-world challenges by simulating
+          early space settlement scenarios on extraterrestrial terrain, testing
+          their rovers in dynamic and demanding environments. Depending on their
+          chosen division, teams compete in either winter or summer events,
+          proving their rover's capabilities in different conditions. Through
+          this project, Sidus Robotics is not only preparing the next generation
+          of engineers and innovators but also showcasing Newfoundland and
+          Memorial University on the national stage.
+        </p>
+      </div>
+    </section>
 
-			<div>
-				<p>
-					The Canadian International Rover Challenge (CIRC) is a university-level competition that challenges students to design, build, and test a rover capable of operating in Mars-like conditions. Hosted by the Canadian Space Technology Advancement Group (CSTAG), the competition fosters innovation in space robotics while providing students with hands-on experience in mechanical design, electronics, and software development. Throughout the challenge, teams must simulate real-world space exploration scenarios, tackling complex tasks such as autonomous navigation, object manipulation, and terrain traversal. Sidus Robotics is excited to take on this challenge, representing Memorial University and contributing to the future of space technology.
-				</p>
-				<a href="https://circ.cstag.ca/" target="_blank"><img loading="lazy" src={CIRC.src} alt=""></a>
-			</div>
-		</section>
+    <section class="content-container" id="about-secondary-content">
+      <h1>UP AND COMING</h1>
 
-		<section class="content-container" id="about-tertiary-content">
-			<h1>OUR TEAM</h1>
+      <div class="container">
+        <p>
+          The Canadian International Rover Challenge (CIRC) is a
+          university-level competition that challenges students to design,
+          build, and test a rover capable of operating in Mars-like conditions.
+          Hosted by the Canadian Space Technology Advancement Group (CSTAG), the
+          competition fosters innovation in space robotics while providing
+          students with hands-on experience in mechanical design, electronics,
+          and software development. Throughout the challenge, teams must
+          simulate real-world space exploration scenarios, tackling complex
+          tasks such as autonomous navigation, object manipulation, and terrain
+          traversal. Sidus Robotics is excited to take on this challenge,
+          representing Memorial University and contributing to the future of
+          space technology.
+        </p>
 
-			<div class="mechanical-row">
-				<h2>MECHANICAL</h2>
-				<div class="member-container">
-					<div class="blur-load">
-						<img loading="lazy" src={JANAYA.src} alt="" class="member">
-						<h3>Janaya Pittman</h3>
-						<a href="https://www.linkedin.com/in/janayamjpittman?trk=contact-info"><img loading="lazy" src={LinkedIn.src} alt=""></a>
-					</div>
+        <div class="container">
+          <a href="https://circ.cstag.ca/"
+            ><img loading="lazy" src={CIRC.src} alt="" /></a
+          >
+        </div>
+      </div>
+    </section>
 
-					<div class="blur-load">
-						<img loading="lazy" src={NICK.src} alt="" class="member">
-						<h3>Nick Lundrigan</h3>
-						<a href="https://www.linkedin.com/in/nicholas-lundrigan"><img loading="lazy" src={LinkedIn.src} alt=""></a>
-					</div>
+    <section class="content-container" id="about-tertiary-content">
+      <h1>OUR TEAM</h1>
 
-					<div class="blur-load">
-						<img loading="lazy" src={ASH.src} alt="" class="member">
-						<h3>Aayushman Srivastava</h3>
-						<a href="https://www.linkedin.com/in/aayushman-srivastava-0213a422b/"><img loading="lazy" src={LinkedIn.src} alt=""></a>
-					</div>
+      <div class="mechanical-row">
+        <div class="container">
+          <h2>MECHANICAL</h2>
+        </div>
 
-					<div class="blur-load">
-						<img loading="lazy" src={SARTHAK.src} alt="" class="member">
-						<h3>Sarthak Srivastava</h3>
-						<a href="https://www.linkedin.com/in/sarthaksrivastava182004/"><img loading="lazy" src={LinkedIn.src} alt=""></a>
-					</div>
+        <div class="member-container">
+          <div class="blur-load">
+            <img loading="lazy" src={SARTHAK.src} alt="" class="member" />
+            <h3>Sarthak Srivastava</h3>
+            <h4>Co-Lead</h4>
+            <a href="https://www.linkedin.com/in/sarthaksrivastava182004/"
+              ><img loading="lazy" src={LinkedIn.src} alt="" /></a
+            >
+          </div>
 
-					<div class="blur-load">
-						<img loading="lazy" src={OMARI.src} alt="" class="member">
-						<h3>Omari De'Pluzer</h3>
-						<a href="https://www.linkedin.com/in/omari-de-pluzer/"><img loading="lazy" src={LinkedIn.src} alt=""></a>
-					</div>
+          <div class="blur-load">
+            <img loading="lazy" src={OMARI.src} alt="" class="member" />
+            <h3>Omari De'Pluzer</h3>
+            <h4>Co-Lead</h4>
+            <a href="https://www.linkedin.com/in/omari-de-pluzer/"
+              ><img loading="lazy" src={LinkedIn.src} alt="" /></a
+            >
+          </div>
 
-					<div class="blur-load">
-						<img loading="lazy" src={JAMES.src} alt="" class="member">
-						<h3>James Barry</h3>
-						<a href="https://www.linkedin.com/in/james-d-barry/"><img loading="lazy" src={LinkedIn.src} alt=""></a>
-					</div>
+          <div class="blur-load">
+            <img loading="lazy" src={ASH.src} alt="" class="member" />
+            <h3>Aayushman Srivastava</h3>
+            <h4>Chassis/Suspension</h4>
+            <a
+              href="https://www.linkedin.com/in/aayushman-srivastava-0213a422b/"
+              ><img loading="lazy" src={LinkedIn.src} alt="" /></a
+            >
+          </div>
 
-					<div class="blur-load">
-						<img loading="lazy" src={ALIF.src} alt="" class="member">
-						<h3>Alif Ayman</h3>
-						<a href="https://www.linkedin.com/in/aamahin/"><img loading="lazy" src={LinkedIn.src} alt=""></a>
-					</div>
-				</div>
-			</div>
+          <div class="blur-load">
+            <img loading="lazy" src={JANAYA.src} alt="" class="member" />
+            <h3>Janaya Pittman</h3>
+            <h4>Chassis/Suspension</h4>
+            <a
+              href="https://www.linkedin.com/in/janayamjpittman?trk=contact-info"
+              ><img loading="lazy" src={LinkedIn.src} alt="" /></a
+            >
+          </div>
 
-			<div class="software-row">
-				<h2>SOFTWARE</h2>
-				<div class="member-container">
-					<div class="blur-load">
-						<img loading="lazy" src={Placeholder.src} alt="" class="member">
-						<h3>Eli Paulin</h3>
-						<a href=""><img loading="lazy" src={LinkedIn.src} alt=""></a>
-					</div>
+          <div class="blur-load">
+            <img loading="lazy" src={JAMES.src} alt="" class="member" />
+            <h3>James Barry</h3>
+            <h4>Chassis/Suspension</h4>
+            <a href="https://www.linkedin.com/in/james-d-barry/"
+              ><img loading="lazy" src={LinkedIn.src} alt="" /></a
+            >
+          </div>
 
-					<div class="blur-load">
-						<img loading="lazy" src={Placeholder.src} alt="" class="member">
-						<h3>Timny Li</h3>
-						<a href="https://www.linkedin.com/in/timny-li-7498b2293/"><img loading="lazy" src={LinkedIn.src} alt=""></a>
-					</div>
+          <div class="blur-load">
+            <img loading="lazy" src={NICK.src} alt="" class="member" />
+            <h3>Nick Lundrigan</h3>
+            <h4>Robotic Armature</h4>
+            <a href="https://www.linkedin.com/in/nicholas-lundrigan"
+              ><img loading="lazy" src={LinkedIn.src} alt="" /></a
+            >
+          </div>
 
-					<div class="blur-load">
-						<img loading="lazy" src={LUCA.src} alt="" class="member">
-						<h3>Luca Mason</h3>
-						<a href="https://www.linkedin.com/in/luca-mason/"><img loading="lazy" src={LinkedIn.src} alt=""></a>
-					</div>
+          <div class="blur-load">
+            <img loading="lazy" src={ALIF.src} alt="" class="member" />
+            <h3>Alif Ayman</h3>
+            <h4>Robotic Armature</h4>
+            <a href="https://www.linkedin.com/in/aamahin/"
+              ><img loading="lazy" src={LinkedIn.src} alt="" /></a
+            >
+          </div>
+        </div>
+      </div>
 
-					<div class="blur-load">
-						<img loading="lazy" src={Placeholder.src} alt="" class="member">
-						<h3>Jaylen Holloway</h3>
-						<a href=""><img loading="lazy" src={LinkedIn.src} alt=""></a>
-					</div>
+      <div class="software-row">
+        <div class="container">
+          <h2>SOFTWARE</h2>
+        </div>
 
-					<div class="blur-load">
-						<img loading="lazy" src={Placeholder.src} alt="" class="member">
-						<h3>Chanel</h3>
-						<a href=""><img loading="lazy" src={LinkedIn.src} alt=""></a>
-					</div>
-				</div>
-			</div>
+        <div class="member-container">
+          <div class="blur-load">
+            <img loading="lazy" src={LUCA.src} alt="" class="member" />
+            <h3>Luca Mason</h3>
+            <h4>Co-Lead</h4>
+            <a href="https://www.linkedin.com/in/luca-mason/"
+              ><img loading="lazy" src={LinkedIn.src} alt="" /></a
+            >
+          </div>
 
-			<div class="electrical-row">
-				<h2>ELECTRICAL</h2>
-				<div class="member-container">
-					<div class="blur-load">
-						<img loading="lazy" src={Placeholder.src} alt="" class="member">
-						<h3>Ashmita Banerjee</h3>
-						<a href=""><img loading="lazy" src={LinkedIn.src} alt=""></a>
-					</div>
+          <div class="blur-load">
+            <img loading="lazy" src={JAYLEN.src} alt="" class="member" />
+            <h3>Jaylen Holloway</h3>
+            <h4>Co-Lead</h4>
+            <a href="https://www.linkedin.com/in/jaylenholloway/"
+              ><img loading="lazy" src={LinkedIn.src} alt="" /></a
+            >
+          </div>
 
-					<div class="blur-load">
-						<img loading="lazy" src={ANNA.src} alt="" class="member">
-						<h3>Anna Goldsworthy</h3>
-						<a href="https://www.linkedin.com/in/anna-goldsworthy/"><img loading="lazy" src={LinkedIn.src} alt=""></a>
-					</div>
+          <div class="blur-load">
+            <img loading="lazy" src={TIM.src} alt="" class="member" />
+            <h3>Timny Li</h3>
+            <h4>Software Systems</h4>
+            <a href="https://www.linkedin.com/in/timny-li-7498b2293/"
+              ><img loading="lazy" src={LinkedIn.src} alt="" /></a
+            >
+          </div>
 
-					<div class="blur-load">
-						<img loading="lazy" src={BRETT.src} alt="" class="member">
-						<h3>Brett Power</h3>
-						<a href="https://www.linkedin.com/in/brett-randy-power/"><img loading="lazy" src={LinkedIn.src} alt=""></a>
-					</div>
+          <div class="blur-load">
+            <img loading="lazy" src={ELI.src} alt="" class="member" />
+            <h3>Eli Paulin</h3>
+            <h4>Software Systems</h4>
+            <a href="https://www.linkedin.com/in/eli-paulin-218271308/"
+              ><img loading="lazy" src={LinkedIn.src} alt="" /></a
+            >
+          </div>
 
-					<div class="blur-load">
-						<img loading="lazy" src={Placeholder.src} alt="" class="member">
-						<h3>Jacob Duncan</h3>
-						<a href="https://www.linkedin.com/in/jacobduncan876/"><img loading="lazy" src={LinkedIn.src} alt=""></a>
-					</div>
+          <div class="blur-load">
+            <img loading="lazy" src={CHENAL.src} alt="" class="member" />
+            <h3>Chenal Laksen Batuwangala</h3>
+            <h4>Software Systems</h4>
+            <a href="https://www.linkedin.com/in/chenal2002/"><img loading="lazy" src={LinkedIn.src} alt="" /></a>
+          </div>
+        </div>
+      </div>
 
-					<div class="blur-load">
-						<img loading="lazy" src={EMMETT.src} alt="" class="member">
-						<h3>Emmett Cochran</h3>
-						<a href="https://www.linkedin.com/in/emmett-cochran-6b3865346/"><img loading="lazy" src={LinkedIn.src} alt=""></a>
-					</div>
-				</div>
-			</div>
+      <div class="electrical-row">
+        <div class="container">
+          <h2>ELECTRICAL</h2>
+        </div>
 
-			<div class="business-row">
-				<h2>BUSINESS</h2>
-				<div class="member-container">
-					<div class="blur-load">
-						<img loading="lazy" src={Placeholder.src} alt="" class="member">
-						<h3>Placeholder</h3>
-						<a href=""><img loading="lazy" src={LinkedIn.src} alt=""></a>
-					</div>
+        <div class="member-container">
+          <div class="blur-load">
+            <img loading="lazy" src={Placeholder.src} alt="" class="member" />
+            <h3>Jacob Duncan</h3>
+            <h4>Co-Lead</h4>
+            <a href="https://www.linkedin.com/in/jacobduncan876/"
+              ><img loading="lazy" src={LinkedIn.src} alt="" /></a
+            >
+          </div>
 
-					<div class="blur-load">
-						<img loading="lazy" src={Placeholder.src} alt="" class="member">
-						<h3>Placeholder</h3>
-						<a href=""><img loading="lazy" src={LinkedIn.src} alt=""></a>
-					</div>
-				</div>
-			</div>
-		</section>
-		<Footer/>
-	</body>
+          <div class="blur-load">
+            <img loading="lazy" src={BRETT.src} alt="" class="member" />
+            <h3>Brett Power</h3>
+            <h4>Co-lead</h4>
+            <a href="https://www.linkedin.com/in/brett-randy-power/"
+              ><img loading="lazy" src={LinkedIn.src} alt="" /></a
+            >
+          </div>
+
+          <div class="blur-load">
+            <img loading="lazy" src={ANNA.src} alt="" class="member" />
+            <h3>Anna Goldsworthy</h3>
+            <h4>Sensors</h4>
+            <a href="https://www.linkedin.com/in/anna-goldsworthy/"
+              ><img loading="lazy" src={LinkedIn.src} alt="" /></a
+            >
+          </div>
+
+          <div class="blur-load">
+            <img loading="lazy" src={ASHMITA.src} alt="" class="member" />
+            <h3>Ashmita Banerjee</h3>
+            <h4>Telecomms</h4>
+            <a href="https://www.linkedin.com/in/ashmitabanerjee-"
+            ><img loading="lazy" src={LinkedIn.src} alt="" /></a>
+          </div>
+
+          <div class="blur-load">
+            <img loading="lazy" src={EMMETT.src} alt="" class="member" />
+            <h3>Emmett Cochran</h3>
+            <h4>Control Systems</h4>
+            <a href="https://www.linkedin.com/in/emmett-cochran-6b3865346/"
+              ><img loading="lazy" src={LinkedIn.src} alt="" /></a
+            >
+          </div>
+        </div>
+      </div>
+
+      <div class="business-row">
+        <div class="container">
+          <h2>BUSINESS</h2>
+        </div>
+
+        <div class="member-container">
+          <div class="blur-load">
+            <img loading="lazy" src={Placeholder.src} alt="" class="member" />
+            <h3>Aditya Bhatia</h3>
+            <h4>Marketing/Outreach</h4>
+            <a href="https://www.linkedin.com/in/aditya-bhatia-35a42b226/"
+              ><img loading="lazy" src={LinkedIn.src} alt="" /></a
+            >
+          </div>
+
+          <div class="blur-load">
+            <img loading="lazy" src={MAIA.src} alt="" class="member" />
+            <h3>Maia Pothier</h3>
+            <h4>Financial Manager</h4>
+            <a href="https://www.linkedin.com/in/maia-pothier/"
+              ><img loading="lazy" src={LinkedIn.src} alt="" /></a
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+    <Footer />
+  </body>
 </html>

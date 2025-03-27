@@ -1,15 +1,25 @@
 ---
-import LinkedIn from "../Images/LinkedIn.svg"
-import Facebook from "../Images/Facebook.svg"
-import Instagram from "../Images/Instagram.svg"
-import "../styles/global.css"
-import "../styles/footer.css"
+import LinkedIn from "../Images/Misc/LinkedIn.svg";
+import Facebook from "../Images/Misc/Facebook.svg";
+import Instagram from "../Images/Misc/Instagram.svg";
+import Copyright from "../Images/Misc/Copyright.png";
+import "../styles/global.css";
+import "../styles/footer.css";
 ---
+
 <footer>
-    <p>2025 Sidus Robotics. All Rights Reserved</p>
+  <div class="container">
+    <p><img src={Copyright.src} alt="" />2025 Sidus Robotics</p>
     <div class="social-medias">
-        <a href="https://www.linkedin.com/company/sidus-robotics/"><img loading="eager" src={LinkedIn.src} alt="" id="linkedin"></a>
-        <a href=""><img loading="eager" src={Facebook.src}alt="" id="facebook"></a>
-        <a href="https://www.instagram.com/sidusrobotics/"><img loading="eager" src={Instagram.src} alt=""></a>
+      <a href="https://www.linkedin.com/company/sidus-robotics/"
+        ><img loading="eager" src={LinkedIn.src} alt="" id="linkedin" /></a
+      >
+      <a href="https://www.facebook.com/share/157vVRRxHz/"
+        ><img loading="eager" src={Facebook.src} alt="" id="facebook" /></a
+      >
+      <a href="https://www.instagram.com/sidusrobotics/"
+        ><img loading="eager" src={Instagram.src} alt="instagram" /></a
+      >
     </div>
+  </div>
 </footer>

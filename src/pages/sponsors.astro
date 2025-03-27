@@ -3,30 +3,37 @@ import BRONZE from "../Images/Banners/BRONZE.svg";
 import SILVER from "../Images/Banners/SILVER.svg";
 import GOLD from "../Images/Banners/GOLD.svg";
 import PLATINUM from "../Images/Banners/PLATINUM.svg";
-import Arrow from "../Images/Misc/Arrow.png"
-import Mail from "../Images/Mail_Icon.svg"
-import Sidus from "../Images/Logos/FullLogo.png"
+import Arrow from "../Images/Misc/Arrow.png";
+import Mail from "../Images/Misc/Mail_Icon.svg";
 import Navigation from "../components/navigation.astro";
-import "../styles/global.css";
 import Footer from "../components/footer.astro";
+import "../styles/global.css";
 import "../styles/sponsors.css";
 ---
 
 <html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="preconnect" href="https://fonts.googleapis.com">
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-		<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
-		<link rel="icon" type="image/png" href="/favicon/favicon-96x96.png" sizes="96x96" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Sidus Robotics</title>
-		<script src="../components/countdown.js"/>
-		<script src="../components/lazyload.js" />
-    <script src="../components/onscreenload.js" />
-	</head>
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      href="/favicon/favicon-96x96.png"
+      sizes="96x96"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Sidus Robotics</title>
+    <script src="../components/countdown.js"></script>
+    <script src="../components/lazyload.js"></script>
+    <script src="../components/onscreenload.js"></script>
+  </head>
 
   <body>
     <Navigation />
@@ -42,9 +49,12 @@ import "../styles/sponsors.css";
           available at different levels.
         </p>
       </div>
-      <div id="arrow-animation">
-				<img src={Arrow.src} alt="">
-			</div>
+
+      <div class="container">
+        <div id="arrow-animation">
+          <img src={Arrow.src} alt="" />
+        </div>
+      </div>
     </section>
 
     <section class="content-container" id="sponsors-main-content">
@@ -53,16 +63,16 @@ import "../styles/sponsors.css";
           <div class="banner">
             <div class="text-content">
               <h1>BRONZE</h1>
-              <h2>$100+ CAD</h2>
+              <h2>$500+ CAD</h2>
               <h3>PERKS</h3>
               <ul>
                 <li>COMPANY LOGO ON ROVER AND WEBSITE</li>
               </ul>
             </div>
-            <img loading="lazy" src={BRONZE.src} alt="">
+            <img loading="lazy" src={BRONZE.src} alt="" />
           </div>
         </div>
-        
+
         <div class="blur-load">
           <div class="banner">
             <div class="text-content">
@@ -74,7 +84,7 @@ import "../styles/sponsors.css";
                 <li>DEDICATED SOCIAL MEDIA POST</li>
               </ul>
             </div>
-            <img loading="lazy" src={SILVER.src} alt="">
+            <img loading="lazy" src={SILVER.src} alt="" />
           </div>
         </div>
 
@@ -91,10 +101,10 @@ import "../styles/sponsors.css";
                 <li>TEAM RESUME PACKAGE</li>
               </ul>
             </div>
-              <img loading="lazy" src={GOLD.src} alt="">
+            <img loading="lazy" src={GOLD.src} alt="" />
           </div>
         </div>
-        
+
         <div class="blur-load">
           <div class="banner">
             <div class="text-content">
@@ -109,27 +119,32 @@ import "../styles/sponsors.css";
                 <li>SOCIAL EVENT WITH THE TEAM</li>
               </ul>
             </div>
-              <img loading="lazy" src={PLATINUM.src} alt="">
+            <img loading="lazy" src={PLATINUM.src} alt="" />
           </div>
         </div>
-
-
       </div>
     </section>
 
     <section class="content-container" id="sponsors-secondary-content">
-        <h1>CONTACT US TO BECOME AN OFFICIAL SPONSOR</h1>
-        <div class="mail">
-          <div class="blur-load">
-            <a href="mailto:sidusrobotics@gmail.com?subject=Inquiries" target="_blank">
-              <img loading="lazy" src={Mail.src} alt="">
-            </a>
-          </div>
-          <a href="mailto:sidusrobotics@gmail.com?subject=Inquiries" target="_blank">
-            <h1>SIDUSROBOTICS@GMAIL.COM</h1>
+      <h1>CONTACT US TO BECOME AN OFFICIAL SPONSOR</h1>
+      <div class="mail">
+        <div class="blur-load">
+          <a
+            href="mailto:sidusrobotics@gmail.com?subject=Inquiries"
+            target="_blank"
+          >
+            <img decoding="sync" loading="lazy" src={Mail.src} alt="" />
           </a>
         </div>
-        
+
+        <a
+          href="mailto:sidusrobotics@gmail.com?subject=Inquiries"
+          target="_blank"
+        >
+          <h1>SIDUSROBOTICS@GMAIL.COM</h1>
+        </a>
+      </div>
     </section>
-  <Footer />
+    <Footer />
+  </body>
 </html>

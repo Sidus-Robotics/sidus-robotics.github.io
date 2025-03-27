@@ -26,78 +26,70 @@ section.content-container#index-main-content div{
 }
 
 section#index-background img{
-    display: block;
+    display: flex;
     justify-self: center;
     max-width: 55.5vmax;
     /* max-width: 100%; */
     margin-top: 5.75vmax;
 }
 
-section #summary h1{
-    display: flex;
-    justify-content: center;
-}
-
-section #summary {
+#summary {
     background-color: black;
     width: 100%;
     text-align: center;
 }
 
-section #summary p{
+#summary p{
     margin: 2vmax 2vmax;
 }
 
-section.content-container#index-secondary-content {
+#index-secondary-content {
     background: linear-gradient(180deg, rgba(0,0,0,0.1) 0%, rgba(37,47,63,1) 69%);
 }
-section.content-container#index-secondary-content .content{
+#index-secondary-content .content{
     display: flex;
     flex-direction: row;
     justify-content: center;
     margin-top: 10vh;
 }
-section.content-container#index-secondary-content h1 {
+#index-secondary-content h1 {
     translate: 0 20px;
 }
-section.content-container#index-secondary-content div p{
+#index-secondary-content div p{
     width: 20vmax;
     text-align:left;
     margin: 2vmax 2vmax;
 }
 
-section.content-container#index-secondary-content img {
+#index-secondary-content img {
     display: block;
     margin: auto;
     width: 10vmax;
 }
 
-section#index-tertiary-content {
+#index-tertiary-content {
     display: block;
     justify-content: center;
     align-items: center;
-    padding-top: 1vmax;
-    /* margin: 0%; */
+    padding: 0 0 12vmax 0;
+
     color: black;
     background-color: lightgrey;
 }
 
-section#index-tertiary-content div{
+#index-tertiary-content div{
     display: flex;
     flex-direction: column;
     align-items: center;
-    translate: 0 -50px;
-}
-/* translate is not a good solution tbh :/ */
-section#index-tertiary-content h1{
-    translate: 0px -100px;
+    /* translate: 0 -50px; */
 }
 
-section#index-tertiary-content img {
+#index-tertiary-content img {
     max-width: 45.5vw;
 }
 
-section#index-tertiary-content h1#bronze-medal {
+h1#bronze-medal {
+    display: flex;
     justify-self: center;
     background-color: rgb(171, 85, 39);
     padding: 10px;
@@ -112,9 +104,9 @@ img#colab {
 
 }
 img#pegnl {
-    aspect-ratio:unset;
+    aspect-ratio:0;
     width: 22vmax;
-    max-width: 12vmax;
+    max-width: 22vmax;
 }
 
 @media only screen and (max-width: 1200px) {

@@ -12,7 +12,7 @@
     }
 }
 
-div#arrow-animation {
+#arrow-animation {
     display: block;
     justify-self: center;
     animation-name: point-down;
@@ -20,7 +20,7 @@ div#arrow-animation {
     animation-iteration-count: infinite;
     animation-direction: alternate;
     position: relative;
-    z-index: 10;
+    z-index: 90;
 }
 
 @keyframes pushUp {
@@ -57,13 +57,15 @@ div#arrow-animation {
 img {
     max-width: 12.5vmax;
     min-width: 0.1vmax;
-    
     width: 100%;
     aspect-ratio: 1/1;
     object-position: center;
     object-fit: cover;
 }
 
+#arrow-animation img {
+    width: fit-content;
+}
 .blur-load::before {
     content: '';
     position: absolute;
@@ -75,12 +77,12 @@ img {
 }
 .blur-load.loaded::before {
     content: none;
+    animation: none;
 }
 .blur-load {
     position: relative;
     background-size: cover;
     background-position: center;
-    
 }
 .blur-load.loaded > img{
     opacity: 1;
@@ -91,7 +93,11 @@ img {
     transition: opacity 750ms ease-in-out;
 }
 
+html {
+    height: -webkit-fill-available;
+}
 body {
+    height: -webkit-fill-available;
     color: white;
     font-family: "IBM Plex Mono";
     background-color: black;
@@ -100,19 +106,25 @@ body {
     margin: 0;
 }
 
+.container {
+    display: flex;
+    justify-content: center;
+}
+h1 {
+    display: flex;
+    justify-content: center;
+}
 h3 {
     display: flex;
     justify-content: center;
 }
 
-section.content-container h1 {
-    display: flex;
+.content-container h1 {
+    display: black;
     justify-content: center;
     padding-top: 100px;
 }
 
 @media only screen and (max-width: 1200px) {
-    div#arrow-animation img{
-        width: 3vmax;
-    }
+
 }

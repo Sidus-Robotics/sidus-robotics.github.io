@@ -1,4 +1,4 @@
-.blur-load::before{
+header .blur-load::before{
     animation: none;
 }
 header {
@@ -8,7 +8,7 @@ header {
     min-height: 10px;
     top: 0;
     background-color: black;
-    z-index: 100;
+    z-index: 1000;
 }
 
 header img{
@@ -31,7 +31,6 @@ header a{
     text-decoration: none;
     font-weight: bold;
     font-size: 1.5vmax;
-    /* margin-right: 10px;   */
 }
 
 .link{
@@ -56,19 +55,18 @@ left: 0;
 background: #fff;
 }
 
-input {
+input{
     content: '';
     cursor: pointer;
     pointer-events: none;
     position: absolute;
     top: 5px;
-    right: 15px;
-    height: 3vmax;
-    width: 3vmax;
-    z-index: 2;
-    padding: 10vmax;
-    background:red;
-    /* margin: 1vmax 21px; */
+    right: -20px;
+    height: 70%;
+    width: 70%;
+    max-width: 100px;
+    max-height: 100px;
+    z-index: 2000;
     opacity: 0;
 }
 
@@ -118,6 +116,7 @@ input:checked ~ div.menu-container div.bar1 {
         translate: 20vmax 0;
         padding: 50vmax 5%;
         overflow-x: hidden;
+        overflow-y: hidden;
     }
     nav a {
         translate: 20px -45vmax;
@@ -129,21 +128,22 @@ input:checked ~ div.menu-container div.bar1 {
         position: fixed;
         pointer-events: none;
         /* margin: 4px 0; */
+        /* width: 100%; */
         padding: 100%;
         height: 100%;
         z-index: -1;
     }
     
-    input:checked ~ div.blur{
+    input:checked ~ .blur{
         background: rgba(0, 0, 0, 0.75);
     } 
-    input:checked ~ nav {
+    input:checked > nav {
         visibility: visible;
     }
     input {
         pointer-events: all;
     }
-    input:not(:checked) ~ nav {
+    input:not(:checked) > nav {
         translate: 100vw;
         visibility: visible;
         transition: 200ms;

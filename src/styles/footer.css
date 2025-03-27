@@ -1,24 +1,41 @@
-footer {
+footer div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
     background-color: black;
-    padding: 25px;
+    padding: 20px;
     position: relative;
     z-index: 100;
 }
-footer p {
+footer p{
+    position: absolute;
     font-size: small;
     opacity: 0.5;
-    position: absolute;
-    translate: 0 -1vmax;
+    left: 10px;
+    translate: 0 -4px;
 }
-.social-medias img{
-    max-width:min-content;
+
+p > img {
+    opacity: 1;
+    aspect-ratio: 0;
+    width: 20px;
+    height: 20px;
+    translate: 0 9px;
+}
+.social-medias a img{
+    display: flex;
+    justify-content: center;
+    max-width:max-content;
     pointer-events: all;
+    padding: 0px 2px 0px 2px;
     width: 30px;
 }
 .social-medias {
+    display: flex;
+    justify-content: center;
     position: absolute;
-    translate: 0 -15px;
     right: 10px;
+    padding: 0px 2px 0px 2px;
     z-index: 1;
 }
 #facebook {

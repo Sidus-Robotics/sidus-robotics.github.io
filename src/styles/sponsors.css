@@ -121,7 +121,9 @@
   flex-wrap: wrap;
   overflow-x: hidden;
   justify-content: center;
-  padding: 10vmax 0 10vmax ;
+  padding: 10vmax 0 10vmax 0;
+  max-width: 100%;
+  margin: auto;
 }
 
 .banner-container h1 {
@@ -143,10 +145,18 @@
   padding: 0 0 1vmax 0;
 }
 
+.banner {
+  display: flex;
+  justify-content: center;
+  padding: 0;
+  margin-left: 10px;
+}
+
 .banner img {
-  aspect-ratio: 1/3;
-  margin: 0 0.7vmax 0 0.7vmax;
-  min-width: fit-content;
+  display: inline-block;
+  aspect-ratio: 0;
+  padding: 0 10px 0 10px;
+  max-width: max-content;
   filter: drop-shadow(0 0 2vmax black);
 }
 
@@ -165,17 +175,15 @@
   flex-direction: column;
   justify-content: center;
   background-color: lightgrey;
-  /* min-width: fit-content; */
   padding:0vmax 0 5vmax 0;
 }
 
 #sponsors-secondary-content a{
   text-decoration: none;
 }
-#sponsors-secondary-content div:nth-child(1) img{
-  /* width: 25vw; */
-  min-width: 100px;
-  max-width: 10vw;
+#sponsors-secondary-content  img{
+  min-width: 50px;
+  max-width: 5vw;
   aspect-ratio: 0;
 }
 
@@ -187,7 +195,7 @@
 
 .mail a > h1 {
   max-width: fit-content;
-  translate: 5px -50px;
+  translate: 20px -50px;
 }
 @media only screen and (max-width: 1200px) {
   @keyframes point-down {
@@ -202,9 +210,22 @@
   .mail a > h1 {
     font-size: medium;
   }
-  #sponsors-secondary-content {
+}
+
+/* Hard fix for mobile devices */
+@media only screen and (max-width: 500px) {
+  .mail a > h1 {
+    font-size: medium;
+    padding-left: 10px;
+  }
+  .banner-container {
     display: flex;
-    /* flex-direction: row; */
+    justify-content: center;
     flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+  }
+  .banner-container img {
+    max-width: 100%;
   }
 }
