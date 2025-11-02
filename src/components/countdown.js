@@ -45,7 +45,7 @@ var x = setInterval(function() {
         var s = " SECONDS "
     }
     // Display the result in the element with id="countdown"
-    document.getElementById("countdown").innerHTML = "COMPETITION: "+ weeks + w + days + d + hours + h
+    document.getElementById("countdown").innerHTML = "ETA: "+ weeks + w + days + d + hours + h
     + minutes + m + seconds + s;
 
     // If the count down is finished, write some text

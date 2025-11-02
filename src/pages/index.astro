@@ -9,6 +9,18 @@ import Mechanical from "../Images/Misc/Gear.png";
 import Electrical from "../Images/Misc/Power.png";
 import Colab from "../Images/Sponsors/colab.png";
 import Pegnl from "../Images/Sponsors/pegnl.svg";
+import filler from "../Images/Team_Photos/2025/Team/test.jpg"
+import team from "../Images/Team_Photos/2025/Team/Sidus_team.png"
+import rover1 from "../Images/Misc/rover1.png"
+import rover2 from "../Images/Misc/rover6.png"
+import rover3 from "../Images/Misc/rover5.png"
+import rover4 from "../Images/Misc/rover2.png"
+import rover5 from "../Images/Misc/rover9.png"
+import rover6 from "../Images/Misc/RoverRecomp.png"
+import Planets from "../Images/Misc/Planets.png"
+import Mars from "../Images/Misc/Mars_background.png"
+import Sponsors from "../Images/Sponsors/Sponsors.png"
+import Sponsor_pkg from "../Images/Sponsors/Sponsor_pkg.png"
 import "../styles/global.css";
 import "../styles/index.css";
 ---
@@ -34,32 +46,29 @@ import "../styles/index.css";
     <title>Sidus Robotics</title>
     <script src="../components/countdown.js"></script>
     <script src="../components/lazyload.js"></script>
+    <script src="../components/slideshow.js"></script>
+    <script src="../components/carousel.js"></script>
   </head>
 
   <body>
     <Navigation />
-
-    <section class="content-container" id="index-background">
-      <div class="container">
-        <div class="blur-load">
-          <img
-            loading="lazy"
-            src={FullLogo.src}
-            alt="siduslogo.png"
-            id="sidus-index"
-          />
-        </div>
+    <section class="logo-section">
+      <div class="slideshow">
+        <div class="slide active" style={`background-image: url(${team.src})`}></div>
+        <div class="slide" style={`background-image: url(${filler.src})`}></div>
+        <div class="slide" style={`background-image: url(${filler.src})`}></div>
       </div>
-
-      <h1 id="countdown">
-        COMPETITION: -- WEEKS -- DAYS -- HOURS -- MINUTES -- SECONDS
-      </h1>
-
-      <div class="container">
-        <div id="arrow-animation">
-          <img src={Arrow.src} alt="" />
-        </div>
+      <div class="logo-overlay">
+        <img src={FullLogo.src} alt="Sidus Logo" class="hero-logo" />
+        <div class="scroll-indicator">Scroll for More</div>
       </div>
+      <div class="bottom-gradient"></div>
+    </section>
+
+    <section class="countdown-section">
+      <div id="countdown">
+          ETA: -- WEEKS -- DAYS -- HOURS -- MINUTES -- SECONDS
+        </div>
     </section>
 
     <section class="content-container" id="index-main-content">
@@ -79,104 +88,121 @@ import "../styles/index.css";
       </div>
     </section>
 
-    <section class="content-container" id="index-secondary-content">
-      <div class="container">
-        <h1>SUBTEAMS</h1>
+    <section class="background-wrapper">
+      <div class="planets-bg">
+        <img src={Planets.src} id="planets-background" alt="Space background" />
       </div>
-
-      <div class="content" id="sub-teams">
-        <div class="info-blocks" id="mechanical-block">
-          <h3>MECHANICAL</h3>
-          <div class="blur-load">
-            <img loading="lazy" src={Mechanical.src} alt="gear.png" />
-          </div>
-          <p>
-            From the rigidity of the chassis and suspension to the complexity of
-            the arm, the mechanical team is responsible for ensuring the designs
-            meet competition specifications and uphold the teams standard of
-            functionality by using CAD software, practical experience, and
-            course knowledge.
-          </p>
-        </div>
-        <div class="info-blocks" id="software-block">
-          <h3>SOFTWARE</h3>
-          <div class="blur-load">
-            <img
-              loading="lazy"
-              src={Software.src}
-              alt=""
-              class="bigger-icon-fix"
-            />
-          </div>
-          <p>
-            The software team is responsible for designing and developing the
-            software that controls the rover. This includes integrating the
-            rover's control systems and sensors with the onboard computer, as
-            well as creating a graphical user interface on the base station for
-            real-time control and sensor data visualization. In the future, the
-            team will expand its focus to developing AI that enables the rover
-            to operate autonomously and complete tasks without human
-            intervention.
-          </p>
+      <section class="content-container" id="index-secondary-content">
+        <div class="container">
+          <h1>OUR SUBTEAMS</h1>
         </div>
 
-        <div class="info-blocks" id="electrical-block">
-          <h3>ELECTRICAL</h3>
-          <div class="blur-load">
-            <img loading="lazy" src={Electrical.src} alt="" />
+        <div class="content" id="sub-teams">
+          <div class="info-blocks" id="mechanical-block">
+            <div class="info-blocks-content">
+              <div class="blur-load">
+                <h3>MECHANICAL</h3>
+                <img loading="lazy" src={Mechanical.src} alt="gear.png" />
+              </div>
+              <p>
+                From the rigidity of the chassis and suspension to the complexity of
+                the arm, the mechanical team is responsible for ensuring the designs
+                meet competition specifications and uphold the teams standard of
+                functionality by using CAD software, practical experience, and
+                course knowledge.
+              </p>
+            </div>
           </div>
-          <p>
-            Our electrical team carries out many critical jobs within the rover.
-            Proper power distribution circuitry for supplying voltage and power
-            levels to all circuits within the rover. Moreover, wireless
-            communications and sensors used for navigation and control. The
-            electrical team carries out these responsibilities to optimize
-            system performance in order to carry out operations effectively and
-            reliably.
-          </p>
-        </div>
 
-        <div class="info-blocks" id="business-block">
-          <h3>BUSINESS</h3>
-          <div class="blur-load">
-            <img loading="lazy" src={Business.src} alt="briefcase.png" />
+          <div class="info-blocks" id="electrical-block">
+            <div class="info-blocks-content">
+              <div class="blur-load">
+                <h3>ELECTRICAL</h3>
+                <img loading="lazy" src={Electrical.src} alt="" />
+              </div>
+              <p>
+                Our electrical team carries out many critical jobs within the rover.
+                Proper power distribution circuitry for supplying voltage and power
+                levels to all circuits within the rover. Moreover, wireless
+                communications and sensors used for navigation and control.
+              </p>
+            </div>
           </div>
-          <p>
-            The Business Team drives our mission forward by managing finances,
-            securing sponsorships, and handling marketing. Just like our rover
-            navigates challenges, we strategize to secure resources and maintain
-            a strong public presence.
-          </p>
+
+          <div class="info-blocks" id="software-block">
+            <div class="info-blocks-content">
+              <div class="blur-load">
+                <h3>SOFTWARE</h3>
+                <img
+                  loading="lazy"
+                  src={Software.src}
+                  alt=""
+                  class="bigger-icon-fix"
+                />
+              </div>
+              <p>
+                The software team is responsible for designing and developing the
+                software that controls the rover. This includes integrating the
+                rover's control systems and sensors with the onboard computer, as
+                well as creating a graphical user interface on the base station.
+              </p>
+            </div>
+          </div>
+
+          <div class="info-blocks" id="business-block">
+            <div class="info-blocks-content">
+              <div class="blur-load">
+                <h3>BUSINESS</h3>
+                <img loading="lazy" src={Business.src} alt="briefcase.png" />
+              </div>
+              <p>
+                The Business Team drives our mission forward by managing finances,
+                securing sponsorships, and handling marketing. Just like our rover
+                navigates challenges, we strategize to secure resources and maintain
+                a strong public presence.
+              </p>
+            </div>
+          </div>
         </div>
-      </div>
+      </section>
+
+      <section id="gallery-section">
+        <div class="gallery-container">
+          <button class="arrow left-arrow" aria-label="Previous">&#8249;</button>
+
+          <div class="gallery-track" id="galleryTrack">
+            <img src={rover1.src} alt="Gallery Image 1" />
+            <img src={rover2.src} alt="Gallery Image 2" />
+            <img src={rover3.src} alt="Gallery Image 3" />
+            <img src={rover4.src} alt="Gallery Image 4" />
+            <img src={rover5.src} alt="Gallery Image 5" />
+            <img src={rover6.src} alt="Gallery Image 6" />
+          </div>
+
+          <button class="arrow right-arrow" aria-label="Next">&#8250;</button>
+        </div>
+      </section>
     </section>
-    <section class="content-container" id="index-tertiary-content">
-      <div class="container">
-        <h1>SPONSORS</h1>
-        <h1 class="" id="bronze-medal">BRONZE</h1>
-      </div>
-
+    <section class="content-container" id="index-tertiary-content" style={`background-image: url(${Mars.src}); background-size: cover; background-position: center; background-repeat: no-repeat;`}>
       <div class="image-block">
-        <div class="blur-load">
-          <a href="https://www.colabsoftware.com/"
-            ><img
-              loading="lazy"
-              src={Colab.src}
-              alt="colab.png"
-              id="colab"
-            /></a
-          >
-          <a href="https://pegnl.ca/"
-            ><img
-              loading="lazy"
-              src={Pegnl.src}
-              alt="pegnl.svg"
-              id="pegnl"
-            /></a
-          >
-        </div>
+        <img
+          loading="lazy"
+          src={Sponsors.src}
+          alt="Sponsors"
+          id="sponsor-image"
+        />
+
+        <a href="/Sponsorship_package.pdf" target="_blank" rel="noopener noreferrer">
+          <img
+            loading="lazy"
+            src={Sponsor_pkg.src}
+            alt="Sponsor Package"
+            id="sponsor_pkg-image"
+          />
+        </a>
       </div>
     </section>
+
     <Footer />
   </body>
 </html>

@@ -23,6 +23,9 @@ import CHENAL from "../Images/Team_Photos/2025/Headshots/chenal.png";
 import MAIA from "../Images/Team_Photos/2025/Headshots/maia.png";
 import ASHMITA from "../Images/Team_Photos/2025/Headshots/ashmita.png";
 import LinkedIn from "../Images/Misc/LinkedIn.svg";
+import team from "../Images/Team_Photos/2025/Team/Sidus_team.png"
+import Earth from "../Images/Misc/Earth.png";
+import Mars from "../Images/Misc/Mars.png";
 import "../styles/global.css";
 import "../styles/about.css";
 ---
@@ -52,28 +55,17 @@ import "../styles/about.css";
     <Navigation />
 
     <section class="content-container" id="about-background">
-      <div class="container">
-        <div id="arrow-animation">
-          <img src={Arrow.src} alt="" />
-        </div>
-      </div>
 
       <div class="blur-load">
         <img
           loading="lazy"
-          src={TeamPic.src}
+          src={team.src}
           alt="siduslogo.png"
           id="sidus-about"
         />
       </div>
-
-      <div id="about-animation">
-        <h1 id="about1">ABOUT US</h1>
-        <h1 id="about2">ABOUT US</h1>
-        <h1 id="about3">ABOUT US</h1>
-      </div>
-
-      <div id="teampic-blur"></div>
+      <div class="scroll-indicator">Scroll for More</div>
+      <div class="bottom-gradient"></div>
     </section>
 
     <section class="content-container" id="about-main-content">
@@ -127,6 +119,11 @@ import "../styles/about.css";
     </section>
 
     <section class="content-container" id="about-tertiary-content">
+      <div class = "planet-bg">
+        <img src={Mars.src} alt="Mars background" class="planet mars" />
+        <img src={Earth.src} alt="Earth background" class="planet earth" />
+        <div class="mars-gradient"></div>
+      </div>
       <h1>OUR TEAM</h1>
 
       <div class="mechanical-row">

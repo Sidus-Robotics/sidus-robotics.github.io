@@ -1,180 +1,178 @@
-@keyframes point-down {
-    from {
-        opacity: 0;
-        translate: 0px 47vw;
-    }
-    to {
-        opacity: 1;
-        translate: 0px 48vw;
-    }
+/* Global section defaults */
+section {
+  background-color: black;
+  color: white;
 }
 
-#arrow-animation {
-    position: relative;
-    z-index: 90;
-}
-@keyframes alternating {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
-}
-
-.member-container .blur-load::before {
-    border-radius: 10px 10px;
-}
-
-#teampic-blur {
-    background: linear-gradient(180deg, rgba(0,0,0,0.9) 10%, rgba(0,0,0,0) 100%);
-    top: 0;
-    position: absolute;
-    height: 58vw;
-    max-width: 100vw;
-    width: 100vw;
-    z-index: 1;
-    visibility: hidden;
+/* Scroll indicator */
+.scroll-indicator {
+  width: 100%;
+  margin-bottom: 2rem;
+  color: rgba(255,255,255,0.9);
+  font-size: 0.8rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  font-weight: 300;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.4rem;
 }
 
-.blur-load #sidus-about {
-    height: 50vw;
-    max-width: 100vw;
-}
-.blur-load.loaded ~ #teampic-blur{
-    visibility: visible;
+.scroll-indicator::after {
+  content: '⌄';
+  font-size: 1rem;
 }
 
-.blur-load .member {
-    width: 10vmax;
-    max-width: 10vmax;
-    max-height: 10vmax;
-}
-#about-animation {
-    left: 10px;
-    top: 4.5vmax;
-    position: absolute;
+/* Background section (top hero) */
+#about-background {
+  position: relative;
+  overflow: hidden;
 }
 
-#about1 , #about2, #about3{
-    position: relative;
-    font-size: 4.5vmax;
-    padding: 0.1vmax;
-    filter: drop-shadow(1px 4px 0px black);
-    z-index: 2;
+.blur-load {
+  position: relative;
+  z-index: 1;
 }
 
-#about1 {
-    animation-name: alternating;
-    animation-duration: 1500ms;
-    animation-iteration-count: infinite;
-    animation-direction:alternate-reverse ;
-    animation-timing-function: ease-in-out;
-    animation-delay: 250ms;
+.blur-load::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 25%;
+  background: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,0.8) 70%, rgba(0,0,0,1) 100%);
+  pointer-events: none;
 }
 
-#about2 {
-    animation-name: alternating;
-    animation-duration: 1500ms;
-    animation-iteration-count: infinite;
-    animation-direction:alternate-reverse ;
-    animation-timing-function: ease-in-out;
-    animation-delay: 500ms;
+/* Mission section */
+#about-main-content {
+  background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(17,27,40,1) 60%, rgba(37,47,63,1) 100%);
+  padding-bottom: 2vmax;
 }
 
-#about3 {
-    animation-name: alternating;
-    animation-duration: 1500ms;
-    animation-iteration-count: infinite;
-    animation-direction:alternate-reverse ;
-    animation-timing-function: ease-in-out;
-    animation-delay: 1000ms;
-}
-
-img#sidus-about {
-    max-width: 100%;
-    padding: 0;
-    aspect-ratio: 2/1;
-}
-
-#about-main-content, #about-secondary-content{
-    padding-bottom: 100px;
-}
-#about-main-content{
-    background: linear-gradient(180deg, rgba(0,0,0,1) 0%,
-            rgba(17,27,40,1) 60%, rgba(37,47,63,1) 100%);
-    padding-bottom: 2vmax;
-}
-#about-background{
-    line-height: 0;
-    display: block;
-    justify-self: center;
-}
-
-.content-container p {
-    text-align: center;
-    margin: 2vmax;
-}
-
+/* Upcoming section */
 #about-secondary-content {
-    padding-top: 1vmax;
-    color: black;
-    background-color: lightgrey;
+  padding-top: 1vmax;
+  color: black;
+  background-color: lightgrey;
+  padding-bottom: 100px;
 }
 
-#about-secondary-content img {
-    min-width: 250px;
-    width: 10vw;
-    max-width: 100%;
-    aspect-ratio: 0;
-}
-.container {
-    flex-direction: column;
-    align-items: center;
-}
+/* Our Team section */
 #about-tertiary-content {
-    padding-top: 1vmax;
-    background: linear-gradient(0deg, rgba(3,3,3,0.4) 5%,
-            rgba(17,27,40,1) 60%, rgba(37,47,63,1) 100%);
-}
-#about-tertiary-content h2 {
-    display: block;
-    justify-self: center;
-}
-img.member {
-    max-width: 15vmax;
-    background-color: lightgrey;
-    filter: drop-shadow(6px 6px 4px black);
-    border-radius: 5%;
+  position: relative;
+  background: black;
+  overflow: hidden;
+  color: white;
+  padding: 6vmax 2vmax;
 }
 
+/* Planet container */
+.planet-bg {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  z-index: 0;
+}
+
+/* Shared planet image styles */
+.planet {
+  position: absolute;
+  object-fit: contain;
+  pointer-events: none;
+  user-select: none;
+  opacity: 0.9;
+}
+
+
+.planet.mars {
+  position: absolute;
+  left: -10vw;
+  bottom: 0;
+  width: 80vw;
+  height: auto;
+  max-width: none;
+  z-index: 1;
+  opacity: 0.9;
+  filter: drop-shadow(0 0 100px rgba(255, 70, 0, 0.3));
+}
+
+.mars-gradient {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 25vmax;
+  background: linear-gradient(to bottom, rgba(0,0,0,0) 0%, black 100%);
+  z-index: 2;
+}
+
+
+/* Earth: smaller and top-right */
+.planet.earth {
+  top: 5%;
+  right: 5%;
+  max-width: none;
+  width: 30vmax;
+  height: auto;
+  z-index: 2;
+  opacity: 0.8;
+}
+
+/* Gradient to fade Mars into background */
+.mars-gradient {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 25vmax;
+  background: linear-gradient(to bottom, rgba(0,0,0,0) 0%, black 100%);
+  z-index: 3;
+}
+
+/* Ensure Our Team content sits above background */
+#about-tertiary-content h1,
+#about-tertiary-content .member-container {
+  position: relative;
+  z-index: 5;
+}
+
+/* Member card layout */
 .member-container {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    text-align: center;
-
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1vmax; /* smaller spacing between cards */
+  padding: 0 5vw; /* space from screen edges */
 }
 
 .member-container div {
-    /* padding: 20px; */
-    margin: 1.5vmax 1.5vmax 10vmax 1.5vmax;
-    max-width: fit-content;
-    max-height: fit-content;
-    border-radius: 10px;
-    font-size: small;
+  margin: 0;
+  text-align: center;
+  font-size: 0.75rem; /* slightly smaller text */
+  flex: 0 0 auto;
 }
+
+img.member {
+  width: 6vmax; 
+  max-width: 7vmax;
+  height: auto;
+  background-color: lightgrey;
+  filter: drop-shadow(4px 4px 3px black);
+  border-radius: 5%;
+}
+
 
 .member-container a img {
-    width: auto;
+  width: auto;
 }
 
-
+/* Adjust for smaller screens */
 @media only screen and (max-width: 1600px) {
-    .member-container {
-        flex-wrap: wrap;
-    }
-    img.member {
-        max-width: 18vmax;
-    }
+  img.member {
+    max-width: 18vmax;
+  }
 }
