@@ -1,0 +1,35 @@
+/* #welcome-section {
+    margin: 100px 0px 0px 0px;
+} */
+
+#video-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height:100%;
+    width:100%;
+    overflow: hidden;
+}
+
+#video-container video{
+    scale: 50%;
+    z-index: -10;
+    position: absolute;
+}
+
+#logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height:100%;
+    width:100%;
+}
+
+#logo-container img {
+    display: flex;
+    max-width: 50vmax;
+    margin-top: 8vh;
+    /* filter: invert(100%); */
+    mix-blend-mode:luminosity;
+    z-index: 0;
+}

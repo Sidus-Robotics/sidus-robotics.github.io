@@ -22,6 +22,7 @@
 
 section.content-container#index-main-content div{
     margin: 5vmax 0 10vmax 0;
+    padding-bottom: 150px;
     background-color: black;
 }
 

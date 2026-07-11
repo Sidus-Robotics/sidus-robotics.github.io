@@ -1,14 +1,14 @@
 ---
-import Navigation from "../components/navigation.astro";
-import Footer from "../components/footer.astro";
-import FullLogo from "../Images/Logos/FullSidusWhite.png";
-import Arrow from "../Images/Misc/Arrow.png";
-import Software from "../Images/Misc/DesktopComputer.png";
-import Business from "../Images/Misc/BriefCase.png";
-import Mechanical from "../Images/Misc/Gear.png";
-import Electrical from "../Images/Misc/Power.png";
-import Colab from "../Images/Sponsors/colab.png";
-import Pegnl from "../Images/Sponsors/pegnl.svg";
+import Navigation from "../components/header/navigation.astro";
+import WelcomeVideo from "../components/welcomeVideo/welcome.astro";
+import Footer from "../components/footer/footer.astro";
+import Arrow from "../assets/media/images/misc/Arrow.png";
+import Software from "../assets/media/images/misc/DesktopComputer.png";
+import Business from "../assets/media/images/misc/BriefCase.png";
+import Mechanical from "../assets/media/images/misc/Gear.png";
+import Electrical from "../assets/media/images/misc/Power.png";
+import Colab from "../assets/media/images/sponsors/colab.png";
+import Pegnl from "../assets/media/images/sponsors/pegnl.svg";
 import "../styles/global.css";
 import "../styles/index.css";
 ---
@@ -32,35 +32,13 @@ import "../styles/index.css";
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
     <title>Sidus Robotics</title>
-    <script src="../components/countdown.js"></script>
-    <script src="../components/lazyload.js"></script>
+    <script src="../components/scripts/countdown.js"></script>
+    <script src="../components/scripts/lazyload.js"></script>
   </head>
 
   <body>
     <Navigation />
-
-    <section class="content-container" id="index-background">
-      <div class="container">
-        <div class="blur-load">
-          <!-- <img
-            loading="lazy"
-            src={FullLogo.src}
-            alt="siduslogo.png"
-            id="sidus-index"
-          /> -->
-        </div>
-      </div>
-
-      <h1 id="countdown">
-        COMPETITION: -- WEEKS -- DAYS -- HOURS -- MINUTES -- SECONDS
-      </h1>
-
-      <div class="container">
-        <div id="arrow-animation">
-          <!-- <img src={Arrow.src} alt="" /> -->
-        </div>
-      </div>
-    </section>
+    <WelcomeVideo/>
 
     <section class="content-container" id="index-main-content">
       <div class="content" id="summary">
@@ -150,6 +128,7 @@ import "../styles/index.css";
         </div>
       </div>
     </section>
+    
     <section class="content-container" id="index-tertiary-content">
       <div class="container">
         <h1>SPONSORS</h1>

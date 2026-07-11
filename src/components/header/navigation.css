@@ -1,28 +1,30 @@
-header .blur-load::before{
-    animation: none;
-}
-header {
-    display: flex;
-    position: fixed;
-    width: 100%;
-    min-height: 10px;
-    top: 0;
-    background-color: black;
-    z-index: 1000;
-}
-
-header img{
-    translate: 1vmax 0;
+#corner-logo {
+    position: absolute;
     min-width: 0.5vmax;
     width: 4.5vmax;
     max-width: 4.5vmax;
+    right: 40vw;
+}
+
+header .blur-load::before{
+    animation: none;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    background-color: black;
+    z-index: 1000;   
+    padding: 0px 0px 2vmax 0px;
 }
 
 header nav{
     list-style-type: none;
     position: absolute;
-    top: 1.35vmax;
-    right: 1.5vmax;
+    top: 1vmax;
 }
 
 header a{
@@ -30,7 +32,8 @@ header a{
     display: inline;
     text-decoration: none;
     font-weight: bold;
-    font-size: 1.5vmax;
+    font-size: 2vmax;
+    margin: 5px;
 }
 
 .link{
@@ -45,13 +48,14 @@ header a{
     margin-top: 1px;
     right: 0;
     background: #fff;
-    transition: width .2s ease;
-    -webkit-transition: width .2s ease;
+    transform: scaleX(0);
+    transform-origin: center;
+    transition: transform 0.2s ease-out;
 }
 
 .link:hover:after{
 width: 100%;
-left: 0;
+transform: scaleX(1);
 background: #fff;
 }
 
@@ -76,7 +80,6 @@ input:checked ~ nav {
     transition: 300ms;
 }
 
-
 input:checked ~ div.menu-container div.bar3 {
     translate: 0 -5px;
     rotate: 45deg;
@@ -98,6 +101,7 @@ input:checked ~ div.menu-container div.bar1 {
     right: 20px;
     z-index: 1;
 }
+
 .bar1, .bar2, .bar3 {
     width: 25px;
     height: 3px;
@@ -117,6 +121,7 @@ input:checked ~ div.menu-container div.bar1 {
         padding: 50vmax 5%;
         overflow-x: hidden;
         overflow-y: hidden;
+        right: 1.5vmax;
     }
     nav a {
         translate: 20px -45vmax;
@@ -151,5 +156,11 @@ input:checked ~ div.menu-container div.bar1 {
 
     .menu-container {
         visibility: visible;
+    }
+
+    .link:after{
+    transition: width .2s ease;
+    -webkit-transition: width .2s ease;
+
     }
 }

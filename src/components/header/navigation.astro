@@ -1,17 +1,17 @@
 ---
-import LogoStar from "../Images/Logos/SidusRoboticsWhite.png";
-import "../styles/global.css";
-import "../styles/navigation.css";
+import LogoStar from "../../assets/media/logos/starWhite.png";
+import "./navigation.css";
 ---
 
 <header>
   <div class="blur-load">
-    <a href="/"><img loading="lazy" src={LogoStar.src} alt="logo.png" /></a>
+    <a href="/"><img id="corner-logo" loading="lazy" src={LogoStar.src} alt="logo.png" /></a>
   </div>
 
   <div class="container">
     <input class="drop-down" type="checkbox" />
     <div class="blur"></div>
+
     <nav>
       <a href="/" class="link">HOME</a>
       <a href="/about" class="link">ABOUT</a>
@@ -22,6 +22,7 @@ import "../styles/navigation.css";
         class="link">CONTACT</a
       >
     </nav>
+    
     <div class="menu-container">
       <div class="bar1"></div>
       <div class="bar2"></div>

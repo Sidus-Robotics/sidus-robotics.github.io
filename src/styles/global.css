@@ -2,6 +2,10 @@
 /* :root {
     
 } */
+video {
+  pointer-events: none;
+}
+
 @keyframes point-down {
     from {
         opacity: 0;
@@ -46,6 +50,7 @@
         background-color: rgba(255, 255, 255, 0);
     }
 }
+
 #countdown {
     font-size: 2vmax;
     padding: 0;
@@ -58,7 +63,7 @@ img {
     max-width: 12.5vmax;
     min-width: 0.1vmax;
     width: 100%;
-    aspect-ratio: 1/1;
+    /* aspect-ratio: 1/1; */
     object-position: center;
     object-fit: cover;
 }
@@ -66,24 +71,29 @@ img {
 #arrow-animation img {
     width: fit-content;
 }
+
 .blur-load::before {
     content: '';
     position: absolute;
     inset: 0;
     animation: pulse 2.5s infinite;
 }
+
 .blur-load.loaded {
     background-image: none;
 }
+
 .blur-load.loaded::before {
     content: none;
     animation: none;
 }
+
 .blur-load {
     position: relative;
     background-size: cover;
     background-position: center;
 }
+
 .blur-load.loaded > img{
     opacity: 1;
 }
@@ -96,6 +106,7 @@ img {
 html {
     height: -webkit-fill-available;
 }
+
 body {
     height: -webkit-fill-available;
     color: white;
@@ -110,10 +121,12 @@ body {
     display: flex;
     justify-content: center;
 }
+
 h1 {
     display: flex;
     justify-content: center;
 }
+
 h3 {
     display: flex;
     justify-content: center;
