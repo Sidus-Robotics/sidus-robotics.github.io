@@ -1,37 +1,12 @@
-.blur-load::before {
-    max-width: max-content;
-}
-
-@keyframes point-down {
-    from {
-        opacity: 0;
-        translate: 0px 0vmax;
-    }
-    to {
-        translate: 0px 1vmax;
-    }
-}
-
-.blur-load.loaded img#sidus-index {
-    aspect-ratio: 0;
-    translate: 0 50px;
-    opacity: 0;
-    animation: pushUp ease 1000ms forwards;
-    width: 100%;
-}
 
 section.content-container#index-main-content div{
-    margin: 5vmax 0 10vmax 0;
+    /* margin: 5vmax 0 10vmax 0; */
     padding-bottom: 150px;
     background-color: black;
 }
 
-section#index-background img{
-    display: flex;
-    justify-self: center;
-    max-width: 55.5vmax;
-    /* max-width: 100%; */
-    margin-top: 5.75vmax;
+h1 {
+    margin: 0px;
 }
 
 #summary {
@@ -89,27 +64,6 @@ section#index-background img{
     max-width: 45.5vw;
 }
 
-h1#bronze-medal {
-    display: flex;
-    justify-self: center;
-    background-color: rgb(171, 85, 39);
-    padding: 10px;
-    width: 100px;
-    border-radius: 10px;
-    color: white;
-}
-
-img#colab {
-    aspect-ratio: 4/1.1;
-    max-width: 40vmax;
-
-}
-img#pegnl {
-    aspect-ratio:0;
-    width: 22vmax;
-    max-width: 22vmax;
-}
-
 @media only screen and (max-width: 1200px) {
     /* img#sidus-index {
         width: 39vmax;
@@ -123,9 +77,4 @@ img#pegnl {
         width: auto;
     }
 
-    h1#countdown {
-        text-align: center;
-        font-size: 2vmax;
-        margin: 0 10px 0 10px;
-    }
 }

@@ -1,6 +1,6 @@
-/* #welcome-section {
-    margin: 100px 0px 0px 0px;
-} */
+#welcome-section {
+    margin-bottom: 40vh;
+}
 
 #video-container {
     display: flex;
@@ -20,16 +20,25 @@
 #logo-container {
     display: flex;
     justify-content: center;
+    translate: 0 100px;
     align-items: center;
     height:100%;
     width:100%;
 }
 
-#logo-container img {
+#sidus-welcome {
     display: flex;
-    max-width: 50vmax;
-    margin-top: 8vh;
+    max-width: 50vmax;  
+    margin-top: 5vh;
     /* filter: invert(100%); */
     mix-blend-mode:luminosity;
     z-index: 0;
+}
+
+.blur-load.loaded img #sidus-welcome {
+    aspect-ratio: 0;
+    translate: 0 50px;
+    opacity: 0;
+    animation: pushUp ease 1000ms forwards;
+    width: 100%;
 }

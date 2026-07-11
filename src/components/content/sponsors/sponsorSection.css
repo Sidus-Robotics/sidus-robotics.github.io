@@ -1,0 +1,52 @@
+:root {
+    --image-url: url("../../../assets/media/images/planets/surfaces/moonSurf.png");
+}
+
+#bronze-medal {
+    display: flex;
+    justify-self: center;
+    background-color: rgb(171, 85, 39);
+    padding: 10px;
+    width: 100px;
+    border-radius: 10px;
+    color: white;
+}
+
+#proud-sponsor {
+    letter-spacing: 10px;
+}
+
+#sponsors-section {
+    background-image: 
+        /* Haze gradient. */
+        linear-gradient(180deg, 
+        rgba(28, 36, 48, 0.00) 9.13%,
+        rgba(13, 16, 22, 0.25) 20.19%, 
+        rgba(9, 11, 15, 0.50) 31.25%, 
+        rgba(4, 6, 8, 0.75) 41.83%, #000 67.79%),
+        var(--image-url);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+}
+
+#colab {
+    width: 22vmax;
+    max-width: 40vmax;
+
+}
+#pegnl {
+    width: 15vmax;
+    max-width: 22vmax;
+}
+
+#mun {
+    width: 10vmax;
+    max-width: 22vmax;
+}
+
+
+@media only screen and (max-width: 1200px) {
+
+}

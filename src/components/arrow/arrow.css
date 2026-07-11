@@ -1,0 +1,28 @@
+@keyframes point-down {
+    from {
+        opacity: 0;
+        translate: 0px 0vmax;
+    }
+    to {
+        translate: 0px 1vmax;
+    }
+}
+
+#arrow-animation {
+    display: block;
+    justify-self: center;
+    animation-name: point-down;
+    animation-duration: 1500ms;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    position: relative;
+    z-index: 90;
+}
+
+#arrow-animation img {
+    width: fit-content;
+}
+
+@media only screen and (max-width: 1200px) {
+
+}

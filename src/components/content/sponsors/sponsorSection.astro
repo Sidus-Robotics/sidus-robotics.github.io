@@ -1,0 +1,33 @@
+---
+import Colab from "../../../assets/media/images/sponsors/colab.png";
+import Pegnl from "../../../assets/media/images/sponsors/pegnl.png";
+import Memorial from "../../../assets/media/images/sponsors/memorial.png";
+import "./sponsorSection.css";
+---
+
+<section class="content-container" id="sponsors-section">
+  <div class="container">
+    <h1 id="proud-sponsor">PROUDLY SPONSORED BY</h1>
+  </div>
+
+  <div class="image-block">
+    <div class="blur-load">
+      <a href="https://www.colabsoftware.com/"
+        ><img loading="lazy" src={Colab.src} alt="colab.png" id="colab" />
+        </a
+      >
+      <a href="https://pegnl.ca/"
+        ><img loading="lazy" src={Pegnl.src} alt="pegnl.png" id="pegnl" /></a
+      >
+       <a href="https://www.mun.ca//"
+        ><img loading="lazy" src={Memorial.src} alt="mun.png" id="mun" /></a
+      >
+    </div>
+  </div>
+
+  <div class="sponsorship-button">
+    <h2>
+      SEE SPONSORSHIP PACKAGE
+    </h2>
+  </div>
+</section>

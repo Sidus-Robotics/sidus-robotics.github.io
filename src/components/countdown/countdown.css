@@ -1,0 +1,22 @@
+#countdown-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+} 
+
+#countdown {
+    font-size: 2vmax;
+    padding: 0;
+    margin: auto;
+    opacity: 0;
+    animation: fadeIn ease 2000ms forwards;
+}
+
+@media only screen and (max-width: 1200px) {
+    h1#countdown {
+        text-align: center;
+        font-size: 2vmax;
+        margin: 0 10px 0 10px;
+    }
+}
