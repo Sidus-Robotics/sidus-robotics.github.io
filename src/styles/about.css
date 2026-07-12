@@ -101,8 +101,9 @@ img#sidus-about {
     padding-bottom: 100px;
 }
 #about-main-content{
-    background: linear-gradient(180deg, rgba(0,0,0,1) 0%,
-            rgba(17,27,40,1) 60%, rgba(37,47,63,1) 100%);
+    /* background: linear-gradient(180deg, rgba(0,0,0,1) 0%,
+            rgba(17,27,40,1) 60%, rgba(37,47,63,1) 100%); */
+
     padding-bottom: 2vmax;
 }
 #about-background{
@@ -134,8 +135,8 @@ img#sidus-about {
 }
 #about-tertiary-content {
     padding-top: 1vmax;
-    background: linear-gradient(0deg, rgba(3,3,3,0.4) 5%,
-            rgba(17,27,40,1) 60%, rgba(37,47,63,1) 100%);
+    /* background: linear-gradient(0deg, rgba(3,3,3,0.4) 5%,
+            rgba(17,27,40,1) 60%, rgba(37,47,63,1) 100%); */
 }
 #about-tertiary-content h2 {
     display: block;

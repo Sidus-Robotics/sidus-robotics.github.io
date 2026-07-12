@@ -1,4 +1,4 @@
-var countDownDate = new Date("Aug 7, 2026 00:00:00").getTime();
+var countDownDate = new Date("Aug 7, 2027 00:00:00").getTime();
 
 var x = setInterval(function() {
 
@@ -45,8 +45,8 @@ var x = setInterval(function() {
         var s = " SECONDS "
     }
     // Display the result in the element with id="countdown"
-    document.getElementById("countdown").innerHTML = "COMPETITION: "+ weeks + w + days + d + hours + h
-    + minutes + m + seconds + s;
+    document.getElementById("countdown").innerHTML = `${weeks} : ${days} : ${hours} : ${minutes} : ${seconds}`;
+    document.getElementById("date-timer").innerHTML = `${w}  ${d}  ${h}  ${m}  ${s}`;
 
     // If the count down is finished, write some text
     if (difference < 0) {

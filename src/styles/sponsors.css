@@ -244,9 +244,9 @@
         translate: 0px 0vmax;
     }
   }
-  .mail a > h1 {
+  /* .mail a > h1 {
     font-size: medium;
-  }
+  } */
 }
 
 /* Hard fix for mobile devices */

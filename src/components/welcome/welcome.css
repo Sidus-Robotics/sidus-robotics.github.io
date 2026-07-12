@@ -8,7 +8,7 @@
     rgba(9, 11, 15, 0.50) 31.25%, 
     rgba(4, 6, 8, 0.75) 41.83%, #000 67.79%)
     ;
-    background-position: center top 200px;
+    background-position: center top 10vh;
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -31,7 +31,7 @@
 #logo-container {
     display: flex;
     justify-content: center;
-    translate: 0 100px;
+    translate: 0 20vh;
     align-items: center;
     height:100%;
     width:100%;

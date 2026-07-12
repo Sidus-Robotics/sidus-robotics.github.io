@@ -5,11 +5,25 @@
     background-color: black;
 } 
 
+#eta {
+    font-size: 4vmax;
+}
+
 #countdown {
-    font-size: 2vmax;
+    font-size: 4vmax;
+    letter-spacing: 10px;
     padding: 0;
     margin: auto;
     opacity: 0;
+    animation: fadeIn ease 2000ms forwards;
+}
+
+#date-timer {
+    font-size: 2vmax;
+    padding: 0;
+    word-spacing: 2vmax;
+    opacity: 0;
+    text-align: center;
     animation: fadeIn ease 2000ms forwards;
 }
 
