@@ -4,7 +4,7 @@ import BRONZE from "../assets/media/images/banners/BRONZE.svg";
 import SILVER from "../assets/media/images/banners/SILVER.svg";
 import GOLD from "../assets/media/images/banners/GOLD.svg";
 import PLATINUM from "../assets/media/images/banners/PLATINUM.svg";
-import Arrow from "../assets/media/images/misc/Arrow.png";
+import Arrow from "../components/arrow/arrow.astro";
 import Mail from "../assets/media/images/misc/Mail_Icon.svg";
 import Navigation from "../components/header/navigation.astro";
 import Footer from "../components/footer/footer.astro";
@@ -28,12 +28,7 @@ import "../styles/sponsors.css";
           available at different levels.
         </p>
       </div>
-
-      <div class="container">
-        <div id="arrow-animation">
-          <img src={Arrow.src} alt="" />
-        </div>
-      </div>
+      <Arrow/>
     </section>
 
     <section class="content-container" id="sponsors-main-content">

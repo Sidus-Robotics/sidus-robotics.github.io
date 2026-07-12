@@ -1,5 +1,16 @@
 #welcome-section {
-    margin-bottom: 40vh;
+    padding-bottom: 40vh;
+    background-image: 
+    /* Haze gradient. */
+    linear-gradient(180deg, 
+    rgba(28, 36, 48, 0.00) 9.13%,
+    rgba(13, 16, 22, 0.25) 20.19%, 
+    rgba(9, 11, 15, 0.50) 31.25%, 
+    rgba(4, 6, 8, 0.75) 41.83%, #000 67.79%)
+    ;
+    background-position: center top 200px;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 #video-container {
@@ -30,9 +41,13 @@
     display: flex;
     max-width: 50vmax;  
     margin-top: 5vh;
-    /* filter: invert(100%); */
-    mix-blend-mode:luminosity;
+    /* filter: invert(100%);
+    mix-blend-mode:exclusion; */
     z-index: 0;
+}
+
+#arrow-container {
+    translate: 0 300px;
 }
 
 .blur-load.loaded img #sidus-welcome {

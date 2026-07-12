@@ -8,6 +8,18 @@
     }
 }
 
+#scroll-for-more {
+    margin-bottom: 50px;
+    letter-spacing: 10px;
+}
+
+#arrow-container {
+    display: block;
+    text-align: center;
+    justify-content: center;
+}
+
+
 #arrow-animation {
     display: block;
     justify-self: center;
@@ -17,10 +29,6 @@
     animation-direction: alternate;
     position: relative;
     z-index: 90;
-}
-
-#arrow-animation img {
-    width: fit-content;
 }
 
 @media only screen and (max-width: 1200px) {

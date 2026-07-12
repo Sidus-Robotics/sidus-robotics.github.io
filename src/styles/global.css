@@ -112,6 +112,11 @@ body {
     justify-content: center;
 }
 
+a {
+    color: white;
+    text-decoration: none;
+}
+
 h1 {
     display: flex;
     justify-content: center;
