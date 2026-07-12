@@ -1,9 +1,9 @@
 ---
 import Head from "../templates/head.astro";
 import Navigation from "../components/header/navigation.astro";
-import TeamPic from "../assets/media/images/team/group/sidusTeamPhoto.png";
+import AboutWelcome from "../components/welcome/aboutWelcome.astro";
 import Footer from "../components/footer/footer.astro";
-import Arrow from "../assets/media/images/misc/Arrow.png";
+import Arrow from "../components/arrow/arrow.astro";
 import CIRC from "../assets/media/images/misc/CIRC.svg";
 import Placeholder from "../assets/media/images/misc/PlaceholderMember.png";
 import ASH from "../assets/media/images/team/headshots/ash.png";
@@ -34,31 +34,7 @@ import "../styles/global.css";
   <Head />
   <body>
     <Navigation />
-
-    <section class="content-container" id="about-background">
-      <div class="container">
-        <div id="arrow-animation">
-          <img src={Arrow.src} alt="" />
-        </div>
-      </div>
-
-      <div class="blur-load">
-        <img
-          loading="lazy"
-          src={TeamPic.src}
-          alt="siduslogo.png"
-          id="sidus-about"
-        />
-      </div>
-
-      <div id="about-animation">
-        <h1 id="about1">ABOUT US</h1>
-        <h1 id="about2">ABOUT US</h1>
-        <h1 id="about3">ABOUT US</h1>
-      </div>
-
-      <div id="teampic-blur"></div>
-    </section>
+    <AboutWelcome />
 
     <section class="content-container" id="about-main-content">
       <h1>OUR MISSION</h1>

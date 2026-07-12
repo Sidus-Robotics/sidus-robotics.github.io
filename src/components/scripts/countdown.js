@@ -13,6 +13,14 @@ var x = setInterval(function() {
     var minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
     var seconds = Math.floor((difference % (1000 * 60)) / 1000);
 
+    var times = {
+        weeks: weeks,
+        days: days,
+        hours: hours,
+        minutes: minutes,
+        seconds: seconds
+    };
+
     // Make this look better
 
     if (weeks == 1) {
@@ -44,6 +52,9 @@ var x = setInterval(function() {
     } else {
         var s = " SECONDS "
     }
+
+    // Really gotta do this a better way.
+
     // Display the result in the element with id="countdown"
     document.getElementById("countdown").innerHTML = `${weeks} : ${days} : ${hours} : ${minutes} : ${seconds}`;
     document.getElementById("date-timer").innerHTML = `${w}  ${d}  ${h}  ${m}  ${s}`;

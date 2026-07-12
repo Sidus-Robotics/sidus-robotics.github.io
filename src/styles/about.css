@@ -1,119 +1,21 @@
-@keyframes point-down {
-    from {
-        opacity: 0;
-        translate: 0px 47vw;
-    }
-    to {
-        opacity: 1;
-        translate: 0px 48vw;
-    }
-}
-
-@keyframes alternating {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
-}
-
-#arrow-animation {
-    position: relative;
-    z-index: 90;
-}
-
-.blur-load::before {
-    width: 10000px;
-}
 
 .member-container .blur-load::before {
     border-radius: 10px 10px;
 }
 
-#teampic-blur {
-    top: 0;
-    position: absolute;
-    height: 58vw;
-    max-width: 100vw;
-    width: 100vw;
-    z-index: 1;
-    visibility: hidden;
-}
 
-.blur-load #sidus-about {
-    height: 50vw;
-    max-width: 100vw;
-}
-.blur-load.loaded ~ #teampic-blur{
-    visibility: visible;
-}
 
 .blur-load .member {
     width: 10vmax;
     max-width: 10vmax;
     max-height: 10vmax;
 }
-#about-animation {
-    left: 10px;
-    top: 4.5vmax;
-    position: absolute;
-}
-
-#about1 , #about2, #about3{
-    position: relative;
-    font-size: 4.5vmax;
-    padding: 0.1vmax;
-    filter: drop-shadow(1px 4px 0px black);
-    z-index: 2;
-}
-
-#about1 {
-    animation-name: alternating;
-    animation-duration: 1500ms;
-    animation-iteration-count: infinite;
-    animation-direction:alternate-reverse ;
-    animation-timing-function: ease-in-out;
-    animation-delay: 250ms;
-}
-
-#about2 {
-    animation-name: alternating;
-    animation-duration: 1500ms;
-    animation-iteration-count: infinite;
-    animation-direction:alternate-reverse ;
-    animation-timing-function: ease-in-out;
-    animation-delay: 500ms;
-}
-
-#about3 {
-    animation-name: alternating;
-    animation-duration: 1500ms;
-    animation-iteration-count: infinite;
-    animation-direction:alternate-reverse ;
-    animation-timing-function: ease-in-out;
-    animation-delay: 1000ms;
-}
-
-img#sidus-about {
-    max-width: 100%;
-    padding: 0;
-    aspect-ratio: 2/1;
-}
 
 #about-main-content, #about-secondary-content{
     padding-bottom: 100px;
 }
 #about-main-content{
-    /* background: linear-gradient(180deg, rgba(0,0,0,1) 0%,
-            rgba(17,27,40,1) 60%, rgba(37,47,63,1) 100%); */
-
     padding-bottom: 2vmax;
-}
-#about-background{
-    line-height: 0;
-    display: block;
-    justify-self: center;
 }
 
 .content-container p {

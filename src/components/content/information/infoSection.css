@@ -3,6 +3,7 @@
 }
 
 #homepage-content {
+    position: relative;
     background-image: 
         /* Haze gradient. */
         linear-gradient(180deg, 
@@ -15,16 +16,13 @@
     background-repeat: no-repeat;
     background-size: cover;
     height: 100%;
+    min-height: 100%;
     padding-bottom: 50vh;
     /* margin-bottom: 50vh; */
 }
 
 section.content-container#index-main-content div{
     padding-bottom: 150px;
-}
-
-h1 {
-    margin: 0px;
 }
 
 #summary {
@@ -55,7 +53,6 @@ h1 {
         inset 0 1px 0 rgba(255, 255, 255, 0.5),
         inset 0 -1px 0 rgba(255, 255, 255, 0.1),
         inset 0 0 0px 0px rgba(255, 255, 255, 0);
-    /* position: relative; */
     overflow: hidden;
 
 }
@@ -101,9 +98,9 @@ h1 {
     /* img#sidus-index {
         width: 39vmax;
     } */
-     #homepage-content {
-        margin-bottom: 75vmax;
-     }
+    #homepage-content {
+        margin-bottom: 65vmax;
+    }
     section.content-container#index-secondary-content .content{
         display: flex;
         flex-direction: column;
