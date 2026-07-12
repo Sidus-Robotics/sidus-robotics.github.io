@@ -2,9 +2,13 @@
 /* :root {
     
 } */
+
 video {
-  pointer-events: none;
+  pointer-events: none !important;
 }
+/* video {
+  pointer-events: none;
+} */
 
 @keyframes point-down {
     from {
@@ -120,16 +124,19 @@ a {
 h1 {
     display: flex;
     justify-content: center;
+    font-size: 2rem;
 }
 
 h2 {
     display: flex;
     justify-content: center;
+    font-size: 1rem;
 }
 
 h3 {
     display: flex;
     justify-content: center;
+    font-size: 1rem;
 }
 
 .content-container h1 {

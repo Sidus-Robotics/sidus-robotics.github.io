@@ -9,8 +9,9 @@
 }
 
 #scroll-for-more {
-    margin-bottom: 65px;
+    margin-bottom: 2vmax;
     letter-spacing: 10px;
+    font-size: 1rem;
 }
 
 #arrow-container {

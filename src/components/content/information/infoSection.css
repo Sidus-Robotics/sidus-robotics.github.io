@@ -16,12 +16,11 @@
     background-size: cover;
     height: 100%;
     padding-bottom: 50vh;
-    margin-bottom: 50vh;
+    /* margin-bottom: 50vh; */
 }
 
 section.content-container#index-main-content div{
     padding-bottom: 150px;
-    /* background-color: black; */
 }
 
 h1 {
@@ -56,8 +55,9 @@ h1 {
         inset 0 1px 0 rgba(255, 255, 255, 0.5),
         inset 0 -1px 0 rgba(255, 255, 255, 0.1),
         inset 0 0 0px 0px rgba(255, 255, 255, 0);
-    position: relative;
+    /* position: relative; */
     overflow: hidden;
+
 }
 #index-secondary-content h1 {
     translate: 0 20px;
@@ -74,14 +74,16 @@ h1 {
     width: 10vmax;
 }
 
+#sub-teams {
+    margin-bottom: 10vmax;
+}
+
 #index-tertiary-content {
     display: block;
     justify-content: center;
     align-items: center;
     padding: 0 0 12vmax 0;
-
     color: black;
-    background-color: lightgrey;
 }
 
 #index-tertiary-content div{
@@ -99,11 +101,13 @@ h1 {
     /* img#sidus-index {
         width: 39vmax;
     } */
-    section.content-container#index-secondary-content div.content{
+     #homepage-content {
+        margin-bottom: 75vmax;
+     }
+    section.content-container#index-secondary-content .content{
         display: flex;
         flex-direction: column;
     }
-
     section.content-container#index-secondary-content .content p{
         width: auto;
     }

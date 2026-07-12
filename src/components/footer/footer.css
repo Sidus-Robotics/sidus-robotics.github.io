@@ -1,5 +1,5 @@
 :root {
-    --large-font-size: 25px;
+    --large-font-size: 1.2rem;
     --testing-color: rgba(255, 0, 0, 0.0);
 }
 
@@ -55,9 +55,8 @@ footer p{
     display: flex;
     justify-content: center;
     position: absolute;
-    right: 10px;
     padding: 0px 2px 0px 2px;
-    right: -20px;
+    right: -40px;
     z-index: 1;
 }
 

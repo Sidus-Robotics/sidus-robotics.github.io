@@ -12,22 +12,22 @@ import "./sponsorSection.css";
     <h1 id="proud-sponsor">PROUDLY SPONSORED BY</h1>
   </div>
 
-  <div id="image-block">
+  <div class="container" id="image-block">
     <div class="blur-load">
-      <a href="https://verafin.com/"
-        ><img loading="lazy" src={Verafin.src} alt="verafin.png" id="verafin" />
-      </a>
       <a href="https://www.colabsoftware.com/"
-        ><img loading="lazy" src={Colab.src} alt="colab.png" id="colab" />
+        ><img class="bronze" loading="lazy" src={Colab.src} alt="colab.png" id="colab" />
       </a>
-      <a href="https://pegnl.ca/"
-        ><img loading="lazy" src={Pegnl.src} alt="pegnl.png" id="pegnl" /></a
-      >
+      <a href="https://verafin.com/"
+        ><img class="platinum" loading="lazy" src={Verafin.src} alt="verafin.png" id="verafin" />
+      </a>
       <a href="https://www.mun.ca//"
-        ><img loading="lazy" src={Memorial.src} alt="mun.png" id="mun" /></a
+        ><img class="platinum" loading="lazy" src={Memorial.src} alt="mun.png" id="mun" /></a
+      >
+      <a href="https://pegnl.ca/"
+        ><img class="bronze" loading="lazy" src={Pegnl.src} alt="pegnl.png" id="pegnl" /></a
       >
       <a href="https://odriverobotics.com/?srsltid=AfmBOopeqXskqrBGO00hyJ1SPaFTVtcdSfIfxFEcF2BfbzuawQA8APyf"
-        ><img loading="lazy" src={Odrive.src} alt="odrive.png" id="odrive" />
+        ><img class="bronze" loading="lazy" src={Odrive.src} alt="odrive.png" id="odrive" />
       </a>
       
     </div>
@@ -35,7 +35,7 @@ import "./sponsorSection.css";
 
   <div class="container">
     <div id="sponsorship-button">
-      <a href="">
+      <a href="/sponsors">
         <h2>SEE SPONSORSHIP PACKAGE</h2>
       </a>
     </div>
