@@ -9,10 +9,6 @@
     }
 }
 
-#arrow-animation {
-    position: relative;
-    z-index: 90;
-}
 @keyframes alternating {
     from {
         opacity: 0;
@@ -22,12 +18,20 @@
     }
 }
 
+#arrow-animation {
+    position: relative;
+    z-index: 90;
+}
+
+.blur-load::before {
+    width: 10000px;
+}
+
 .member-container .blur-load::before {
     border-radius: 10px 10px;
 }
 
 #teampic-blur {
-    background: linear-gradient(180deg, rgba(0,0,0,0.9) 10%, rgba(0,0,0,0) 100%);
     top: 0;
     position: absolute;
     height: 58vw;
@@ -135,8 +139,6 @@ img#sidus-about {
 }
 #about-tertiary-content {
     padding-top: 1vmax;
-    /* background: linear-gradient(0deg, rgba(3,3,3,0.4) 5%,
-            rgba(17,27,40,1) 60%, rgba(37,47,63,1) 100%); */
 }
 #about-tertiary-content h2 {
     display: block;

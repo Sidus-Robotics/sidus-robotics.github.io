@@ -9,7 +9,7 @@
 }
 
 #scroll-for-more {
-    margin-bottom: 2vmax;
+    margin-bottom: 60px;
     letter-spacing: 10px;
     font-size: 1rem;
 }
@@ -33,5 +33,7 @@
 }
 
 @media only screen and (max-width: 1200px) {
-
+    #scroll-for-more {
+        margin-bottom: 10px;
+    }
 }
