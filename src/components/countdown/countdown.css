@@ -6,11 +6,11 @@
 } 
 
 #eta {
-    font-size: 4vmax;
+    font-size: 2rem;
 }
 
 #countdown {
-    font-size: 4vmax;
+    font-size: 2rem;
     letter-spacing: 10px;
     padding: 0;
     margin: auto;
@@ -19,7 +19,7 @@
 }
 
 #date-timer {
-    font-size: 2vmax;
+    font-size: 1rem;
     padding: 0;
     word-spacing: 2vmax;
     opacity: 0;
