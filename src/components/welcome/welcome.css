@@ -1,0 +1,59 @@
+#welcome-section {
+    padding-bottom: 40vh;
+    background-image: 
+    /* Haze gradient. */
+    linear-gradient(180deg, 
+    rgba(28, 36, 48, 0.00) 9.13%,
+    rgba(13, 16, 22, 0.25) 20.19%, 
+    rgba(9, 11, 15, 0.50) 31.25%, 
+    rgba(4, 6, 8, 0.75) 41.83%, #000 67.79%)
+    ;
+    background-position: center top 10vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#video-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height:100%;
+    width:100%;
+    overflow: hidden;
+}
+
+#video-container video{
+    scale: 50%;
+    z-index: -10;
+    position: absolute;
+}
+
+#logo-container {
+    display: flex;
+    justify-content: center;
+    translate: 0 20vh;
+    align-items: center;
+    height:100%;
+    width:100%;
+}
+
+#sidus-welcome {
+    display: flex;
+    max-width: 50vmax;  
+    margin-top: 5vh;
+    /* filter: invert(100%);
+    mix-blend-mode:exclusion; */
+    z-index: 0;
+}
+
+#arrow-container {
+    translate: 0 300px;
+}
+
+.blur-load.loaded img #sidus-welcome {
+    aspect-ratio: 0;
+    translate: 0 50px;
+    opacity: 0;
+    animation: pushUp ease 1000ms forwards;
+    width: 100%;
+}

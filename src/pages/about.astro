@@ -1,57 +1,37 @@
 ---
-import Navigation from "../components/navigation.astro";
-import TeamPic from "../Images/Team_Photos/2025/Team/TeamPic.png";
-import Footer from "../components/footer.astro";
-import Arrow from "../Images/Misc/Arrow.png";
-import CIRC from "../Images/Misc/CIRC.svg";
-import Placeholder from "../Images/Misc/PlaceholderMember.png";
-import ASH from "../Images/Team_Photos/2025/Headshots/ash.png";
-import ALIF from "../Images/Team_Photos/2025/Headshots/alif.png";
-import ANNA from "../Images/Team_Photos/2025/Headshots/anna.png";
-import BRETT from "../Images/Team_Photos/2025/Headshots/brett.png";
-import EMMETT from "../Images/Team_Photos/2025/Headshots/emmett.png";
-import JAMES from "../Images/Team_Photos/2025/Headshots/james.png";
-import JANAYA from "../Images/Team_Photos/2025/Headshots/janaya.png";
-import LUCA from "../Images/Team_Photos/2025/Headshots/luca.png";
-import NICK from "../Images/Team_Photos/2025/Headshots/nick.png";
-import OMARI from "../Images/Team_Photos/2025/Headshots/omari.png";
-import SARTHAK from "../Images/Team_Photos/2025/Headshots/sarthak.png";
-import TIM from "../Images/Team_Photos/2025/Headshots/tim.png";
-import JAYLEN from "../Images/Team_Photos/2025/Headshots/jaylen.png";
-import ELI from "../Images/Team_Photos/2025/Headshots/eli.png";
-import CHENAL from "../Images/Team_Photos/2025/Headshots/chenal.png";
-import MAIA from "../Images/Team_Photos/2025/Headshots/maia.png";
-import ASHMITA from "../Images/Team_Photos/2025/Headshots/ashmita.png";
-import CIARA from "../Images/Team_Photos/2025/Headshots/ciara.png";
-import ALEXANDER from "../Images/Team_Photos/2025/Headshots/alexander.png";
-import JACOB from "../Images/Team_Photos/2025/Headshots/jduncan.jpg";
-import DANIELLE from "../Images/Team_Photos/2025/Headshots/danielle.png";
-import LinkedIn from "../Images/Misc/LinkedIn.svg";
-import "../styles/global.css";
+import Head from "../templates/head.astro";
+import Navigation from "../components/header/navigation.astro";
+import TeamPic from "../assets/media/images/team/group/sidusTeamPhoto.png";
+import Footer from "../components/footer/footer.astro";
+import Arrow from "../assets/media/images/misc/Arrow.png";
+import CIRC from "../assets/media/images/misc/CIRC.svg";
+import Placeholder from "../assets/media/images/misc/PlaceholderMember.png";
+import ASH from "../assets/media/images/team/headshots/ash.png";
+import ALIF from "../assets/media/images/team/headshots/alif.png";
+import BRETT from "../assets/media/images/team/headshots/brett.png";
+import EMMETT from "../assets/media/images/team/headshots/emmett.png";
+import JAMES from "../assets/media/images/team/headshots/james.png";
+import JANAYA from "../assets/media/images/team/headshots/janaya.png";
+import NICK from "../assets/media/images/team/headshots/nick.png";
+import OMARI from "../assets/media/images/team/headshots/omari.png";
+import SARTHAK from "../assets/media/images/team/headshots/sarthak.png";
+import TIM from "../assets/media/images/team/headshots/tim.png";
+import JAYLEN from "../assets/media/images/team/headshots/jaylen.png";
+import ELI from "../assets/media/images/team/headshots/eli.png";
+import CHENAL from "../assets/media/images/team/headshots/chenal.png";
+import MAIA from "../assets/media/images/team/headshots/maia.png";
+import ASHMITA from "../assets/media/images/team/headshots/ashmita.png";
+import CIARA from "../assets/media/images/team/headshots/ciara.png";
+import ALEXANDER from "../assets/media/images/team/headshots/alexander.png";
+import JACOB from "../assets/media/images/team/headshots/jduncan.jpg";
+import DANIELLE from "../assets/media/images/team/headshots/danielle.png";
+import LinkedIn from "../assets/media/images/misc/LinkedIn.svg";
 import "../styles/about.css";
+import "../styles/global.css";
 ---
 
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      href="/favicon/favicon-96x96.png"
-      sizes="96x96"
-    />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="generator" content={Astro.generator} />
-    <title>Sidus Robotics</title>
-    <script src="../components/lazyload.js"></script>
-  </head>
+  <Head />
   <body>
     <Navigation />
 
@@ -216,7 +196,7 @@ import "../styles/about.css";
           <div class="blur-load">
             <img loading="lazy" src={JAYLEN.src} alt="" class="member" />
             <h3>Jaylen Holloway</h3>
-            <h4>Lead</h4>
+            <h4>Co-Lead</h4>
             <a href="https://www.linkedin.com/in/jaylenholloway/"
               ><img loading="lazy" src={LinkedIn.src} alt="" /></a
             >
@@ -225,10 +205,17 @@ import "../styles/about.css";
           <div class="blur-load">
             <img loading="lazy" src={TIM.src} alt="" class="member" />
             <h3>Timny Li</h3>
-            <h4>Software Systems</h4>
+            <h4>Co-Lead</h4>
             <a href="https://www.linkedin.com/in/timny-li-7498b2293/"
               ><img loading="lazy" src={LinkedIn.src} alt="" /></a
             >
+          </div>
+
+          <div class="blur-load">
+            <img loading="lazy" src={Placeholder.src} alt="" class="member" />
+            <h3>Nick Balsom</h3>
+            <h4>Mission Control/Telemetry</h4>
+            <a href="https://www.linkedin.com/in/nicholas-balsom/"><img loading="lazy" src={LinkedIn.src} alt="" /></a>
           </div>
 
           <div class="blur-load">
@@ -238,6 +225,20 @@ import "../styles/about.css";
             <a href="https://www.linkedin.com/in/eli-paulin-218271308/"
               ><img loading="lazy" src={LinkedIn.src} alt="" /></a
             >
+          </div>
+
+          <div class="blur-load">
+            <img loading="lazy" src={Placeholder.src} alt="" class="member" />
+            <h3>Raheem M.</h3>
+            <h4>Software Systems</h4>
+            <a href="https://www.linkedin.com/in/raheemmadeleka/"><img loading="lazy" src={LinkedIn.src} alt="" /></a>
+          </div>
+
+          <div class="blur-load">
+            <img loading="lazy" src={Placeholder.src} alt="" class="member" />
+            <h3>Zuhair Safwan</h3>
+            <h4>Software Systems</h4>
+            <a href="https://www.linkedin.com/in/zuhair-safwan-b6669320a/"><img loading="lazy" src={LinkedIn.src} alt="" /></a>
           </div>
 
           <div class="blur-load">
@@ -258,19 +259,33 @@ import "../styles/about.css";
           <div class="blur-load">
             <img loading="lazy" src={JACOB.src} alt="" class="member" />
             <h3>Jacob Duncan</h3>
-            <h4>Lead</h4>
+            <h4>Co-Lead</h4>
             <a href="https://www.linkedin.com/in/jacobduncan876/"
               ><img loading="lazy" src={LinkedIn.src} alt="" /></a
             >
           </div>
 
           <div class="blur-load">
+            <img loading="lazy" src={Placeholder.src} alt="" class="member" />
+            <h3>Brett Power</h3>
+            <h4>Co-Lead</h4>
+            <a href="https://www.linkedin.com/in/brett-randy-power/"><img loading="lazy" src={LinkedIn.src} alt="" /></a>
+          </div>
+
+          <div class="blur-load">
             <img loading="lazy" src={EMMETT.src} alt="" class="member" />
             <h3>Emmett Cochran</h3>
-            <h4>Assistant Lead</h4>
+            <h4>Co-Lead</h4>
             <a href="https://www.linkedin.com/in/emmett-cochran-6b3865346/"
               ><img loading="lazy" src={LinkedIn.src} alt="" /></a
             >
+          </div>
+
+          <div class="blur-load">
+            <img loading="lazy" src={Placeholder.src} alt="" class="member" />
+            <h3>Isaac Lily</h3>
+            <h4>Electrical Systems</h4>
+            <a href="https://www.linkedin.com/in/isaac-lilly-755b55261/"><img loading="lazy" src={LinkedIn.src} alt="" /></a>
           </div>
 
           <div class="blur-load">

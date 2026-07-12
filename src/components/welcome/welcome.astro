@@ -1,0 +1,27 @@
+---
+import Video from "../../assets/media/videos/team.mp4";
+import FullLogo from "../../assets/media/logos/fullLogoWhite.png";
+import Arrow from "../arrow/arrow.astro";
+import "./welcome.css";
+---
+
+<section id="welcome-section">
+  <div id="logo-container">
+    <div class="blur-load">
+      <img
+        loading="lazy"
+        src={FullLogo.src}
+        alt="siduslogo.png"
+        id="sidus-welcome"
+      />
+    </div>
+  </div>
+
+  <div id="video-container">
+    <video id="background-video" autoplay muted playsinline loop>
+      <source src={Video} type="video/mp4" />
+    </video>
+  </div>
+
+  <Arrow />
+</section>

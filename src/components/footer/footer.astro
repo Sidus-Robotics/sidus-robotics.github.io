@@ -1,0 +1,32 @@
+---
+import LinkedIn from "../../assets/media/images/misc/LinkedIn.svg";
+import Facebook from "../../assets/media/images/misc/Facebook.svg";
+import Instagram from "../../assets/media/images/misc/Instagram.svg";
+import Copyright from "../../assets/icons/copyright.png";
+import FullLogo from "../../assets/media/logos/fullLogoWhite.png";
+import "./footer.css";
+---
+
+<footer>
+  <div class="container">
+
+    <div id="footer-copyright-container">
+      <img id="copyright-icon" src={Copyright.src} alt="" />
+      <p>2026</p>
+      <img id="full-logo" src={FullLogo.src} alt="" />
+    </div>
+
+    <div class="social-medias-container">
+      <a href="https://www.linkedin.com/company/sidus-robotics/"
+        ><img id="linkedin" loading="eager" src={LinkedIn.src} alt="LinkedIn" /></a
+      >
+      <a href="https://www.facebook.com/share/157vVRRxHz/"
+        ><img id="facebook" loading="eager" src={Facebook.src} alt="Facebook" /></a
+      >
+      <a href="https://www.instagram.com/sidusrobotics/"
+        ><img id="instagram" loading="eager" src={Instagram.src} alt="Instagram" /></a
+      >
+      
+    </div>
+  </div>
+</footer>

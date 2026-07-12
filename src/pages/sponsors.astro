@@ -1,40 +1,19 @@
 ---
-import BRONZE from "../Images/Banners/BRONZE.svg";
-import SILVER from "../Images/Banners/SILVER.svg";
-import GOLD from "../Images/Banners/GOLD.svg";
-import PLATINUM from "../Images/Banners/PLATINUM.svg";
-import Arrow from "../Images/Misc/Arrow.png";
-import Mail from "../Images/Misc/Mail_Icon.svg";
-import Navigation from "../components/navigation.astro";
-import Footer from "../components/footer.astro";
+import Head from "../templates/head.astro";
+import BRONZE from "../assets/media/images/banners/BRONZE.svg";
+import SILVER from "../assets/media/images/banners/SILVER.svg";
+import GOLD from "../assets/media/images/banners/GOLD.svg";
+import PLATINUM from "../assets/media/images/banners/PLATINUM.svg";
+import Arrow from "../components/arrow/arrow.astro";
+import Mail from "../assets/media/images/misc/Mail_Icon.svg";
+import Navigation from "../components/header/navigation.astro";
+import Footer from "../components/footer/footer.astro";
 import "../styles/global.css";
 import "../styles/sponsors.css";
 ---
 
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      href="/favicon/favicon-96x96.png"
-      sizes="96x96"
-    />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="generator" content={Astro.generator} />
-    <title>Sidus Robotics</title>
-    <script src="../components/countdown.js"></script>
-    <script src="../components/lazyload.js"></script>
-    <script src="../components/onscreenload.js"></script>
-  </head>
-
+  <Head />
   <body>
     <Navigation />
 
@@ -49,12 +28,7 @@ import "../styles/sponsors.css";
           available at different levels.
         </p>
       </div>
-
-      <div class="container">
-        <div id="arrow-animation">
-          <img src={Arrow.src} alt="" />
-        </div>
-      </div>
+      <Arrow/>
     </section>
 
     <section class="content-container" id="sponsors-main-content">
@@ -145,6 +119,7 @@ import "../styles/sponsors.css";
         </a>
       </div>
     </section>
+    
     <Footer />
   </body>
 </html>
