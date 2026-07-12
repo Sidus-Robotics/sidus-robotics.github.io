@@ -1,0 +1,30 @@
+:root {
+    --about-image-url: url("../../assets/media/images/team/group/sidusTeamPhoto.png");
+}
+
+
+#about-welcome{
+    position: relative;
+    background-image: 
+    /* Haze gradient. */
+    linear-gradient(180deg, 
+    rgba(28, 36, 48, 0.00) 60%,
+    rgba(13, 16, 22, 0.25) 70%, 
+    rgba(9, 11, 15, 0.50) 80%, 
+    rgba(4, 6, 8, 0.75) 90%,
+    #000 100%),
+    var(--about-image-url)
+    ;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    
+}
+
+
+@media only screen and (max-width: 1200px) {
+    #about-welcome {
+        background-position: 100% auto;
+    }
+}

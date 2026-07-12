@@ -28,6 +28,8 @@
 }
 
 #sponsors-section {
+    position: relative;
+    background-color: transparent;
     background-image: 
         /* Haze gradient. */
         linear-gradient(180deg, 

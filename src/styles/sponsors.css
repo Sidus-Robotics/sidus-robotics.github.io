@@ -115,7 +115,7 @@
         rgba(4, 6, 8, 0.75) 41.83%, #000 100%),
         var(--image-url);
 
-    background-position: 100% 50%;
+    background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
 }
