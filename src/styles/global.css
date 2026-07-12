@@ -7,7 +7,7 @@ video {
   pointer-events: none !important;
   /* background-color: transparent !important; 
    */
-  background-color: #ffffff;  
+  background-color: transparent;  
   object-fit: cover; 
 }
 
