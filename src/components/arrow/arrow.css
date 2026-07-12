@@ -1,0 +1,36 @@
+@keyframes point-down {
+    from {
+        opacity: 0;
+        translate: 0px 0vmax;
+    }
+    to {
+        translate: 0px 1vmax;
+    }
+}
+
+#scroll-for-more {
+    margin-bottom: 65px;
+    letter-spacing: 10px;
+}
+
+#arrow-container {
+    display: block;
+    text-align: center;
+    justify-content: center;
+}
+
+
+#arrow-animation {
+    display: block;
+    justify-self: center;
+    animation-name: point-down;
+    animation-duration: 1500ms;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    position: relative;
+    z-index: 90;
+}
+
+@media only screen and (max-width: 1200px) {
+
+}

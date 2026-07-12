@@ -2,6 +2,10 @@
 /* :root {
     
 } */
+video {
+  pointer-events: none;
+}
+
 @keyframes point-down {
     from {
         opacity: 0;
@@ -12,24 +16,12 @@
     }
 }
 
-#arrow-animation {
-    display: block;
-    justify-self: center;
-    animation-name: point-down;
-    animation-duration: 1500ms;
-    animation-iteration-count: infinite;
-    animation-direction: alternate;
-    position: relative;
-    z-index: 90;
-}
-
 @keyframes pushUp {
     to {
         opacity: 1;
         translate: 0 -10px;
     }
 }
-
 
 @keyframes fadeIn {
     to {opacity: 1;}
@@ -46,44 +38,39 @@
         background-color: rgba(255, 255, 255, 0);
     }
 }
-#countdown {
-    font-size: 2vmax;
-    padding: 0;
-    margin: auto;
-    opacity: 0;
-    animation: fadeIn ease 2000ms forwards;
-}
 
 img {
     max-width: 12.5vmax;
     min-width: 0.1vmax;
     width: 100%;
-    aspect-ratio: 1/1;
+    /* aspect-ratio: 1/1; */
     object-position: center;
     object-fit: cover;
 }
 
-#arrow-animation img {
-    width: fit-content;
-}
+
 .blur-load::before {
     content: '';
     position: absolute;
     inset: 0;
     animation: pulse 2.5s infinite;
 }
+
 .blur-load.loaded {
     background-image: none;
 }
+
 .blur-load.loaded::before {
     content: none;
     animation: none;
 }
+
 .blur-load {
     position: relative;
     background-size: cover;
     background-position: center;
 }
+
 .blur-load.loaded > img{
     opacity: 1;
 }
@@ -93,13 +80,27 @@ img {
     transition: opacity 750ms ease-in-out;
 }
 
+.blur-load::before {
+    max-width: max-content;
+}
+
 html {
     height: -webkit-fill-available;
 }
+
+.adlam-display-regular {
+  font-family: "ADLaM Display", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
 body {
     height: -webkit-fill-available;
     color: white;
-    font-family: "IBM Plex Mono";
+    /* font-family: "IBM Plex Mono";
+     */
+     font-family: "ADLaM Display";
     background-color: black;
     width: 100%;
     overflow-x:hidden;
@@ -110,10 +111,22 @@ body {
     display: flex;
     justify-content: center;
 }
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
 h1 {
     display: flex;
     justify-content: center;
 }
+
+h2 {
+    display: flex;
+    justify-content: center;
+}
+
 h3 {
     display: flex;
     justify-content: center;

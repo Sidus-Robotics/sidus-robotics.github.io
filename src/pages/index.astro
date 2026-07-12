@@ -1,182 +1,30 @@
 ---
-import Navigation from "../components/navigation.astro";
-import Footer from "../components/footer.astro";
-import FullLogo from "../Images/Logos/FullSidusWhite.png";
-import Arrow from "../Images/Misc/Arrow.png";
-import Software from "../Images/Misc/DesktopComputer.png";
-import Business from "../Images/Misc/BriefCase.png";
-import Mechanical from "../Images/Misc/Gear.png";
-import Electrical from "../Images/Misc/Power.png";
-import Colab from "../Images/Sponsors/colab.png";
-import Pegnl from "../Images/Sponsors/pegnl.svg";
+import Head from "../templates/head.astro";
+import Navigation from "../components/header/navigation.astro";
+import Welcome from "../components/welcome/welcome.astro";
+import MainContent from "../components/content/information/infoSection.astro";
+import SponsorContent from "../components/content/sponsors/sponsorSection.astro";
+import Countdown from "../components/countdown/countdown.astro";
+import Arrow from "../components/arrow/arrow.astro";
+import Footer from "../components/footer/footer.astro";
 import "../styles/global.css";
-import "../styles/index.css";
 ---
 
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      href="/favicon/favicon-96x96.png"
-      sizes="96x96"
-    />
-    <meta name="viewport" content="width=device-width" />
-    <meta name="generator" content={Astro.generator} />
-    <title>Sidus Robotics</title>
-    <script src="../components/countdown.js"></script>
-    <script src="../components/lazyload.js"></script>
-  </head>
-
-  <body>
+ <Head/>
+  <body id="main-page-body">
     <Navigation />
 
-    <section class="content-container" id="index-background">
-      <div class="container">
-        <div class="blur-load">
-          <img
-            loading="lazy"
-            src={FullLogo.src}
-            alt="siduslogo.png"
-            id="sidus-index"
-          />
-        </div>
-      </div>
+    <Welcome />
+    
+    <!-- <Arrow /> -->
 
-      <h1 id="countdown">
-        COMPETITION: -- WEEKS -- DAYS -- HOURS -- MINUTES -- SECONDS
-      </h1>
+    <Countdown />
 
-      <div class="container">
-        <div id="arrow-animation">
-          <img src={Arrow.src} alt="" />
-        </div>
-      </div>
-    </section>
+    <MainContent />
 
-    <section class="content-container" id="index-main-content">
-      <div class="content" id="summary">
-        <h1>WHO WE ARE</h1>
-        <p>
-          Sidus Robotics is Memorial University's first-ever Mars rover design
-          team, comprised of a diverse group of students from engineering,
-          computer science, and business. We are preparing to compete in the
-          2026 Canadian International Rover Challenge (CIRC), where university
-          teams design and build a rover capable of operating in Mars-like
-          conditions. By taking on this challenge, Sidus Robotics not only
-          provides members with invaluable real-world experience but also puts
-          Newfoundland and Memorial University on the national stage in space
-          robotics and engineering.
-        </p>
-      </div>
-    </section>
+    <SponsorContent />
 
-    <section class="content-container" id="index-secondary-content">
-      <div class="container">
-        <h1>SUBTEAMS</h1>
-      </div>
-
-      <div class="content" id="sub-teams">
-        <div class="info-blocks" id="mechanical-block">
-          <h3>MECHANICAL</h3>
-          <div class="blur-load">
-            <img loading="lazy" src={Mechanical.src} alt="gear.png" />
-          </div>
-          <p>
-            From the rigidity of the chassis and suspension to the complexity of
-            the arm, the mechanical team is responsible for ensuring the designs
-            meet competition specifications and uphold the teams standard of
-            functionality by using CAD software, practical experience, and
-            course knowledge.
-          </p>
-        </div>
-        <div class="info-blocks" id="software-block">
-          <h3>SOFTWARE</h3>
-          <div class="blur-load">
-            <img
-              loading="lazy"
-              src={Software.src}
-              alt=""
-              class="bigger-icon-fix"
-            />
-          </div>
-          <p>
-            The software team is responsible for designing and developing the
-            software that controls the rover. This includes integrating the
-            rover's control systems and sensors with the onboard computer, as
-            well as creating a graphical user interface on the base station for
-            real-time control and sensor data visualization. In the future, the
-            team will expand its focus to developing AI that enables the rover
-            to operate autonomously and complete tasks without human
-            intervention.
-          </p>
-        </div>
-
-        <div class="info-blocks" id="electrical-block">
-          <h3>ELECTRICAL</h3>
-          <div class="blur-load">
-            <img loading="lazy" src={Electrical.src} alt="" />
-          </div>
-          <p>
-            Our electrical team carries out many critical jobs within the rover.
-            Proper power distribution circuitry for supplying voltage and power
-            levels to all circuits within the rover. Moreover, wireless
-            communications and sensors used for navigation and control. The
-            electrical team carries out these responsibilities to optimize
-            system performance in order to carry out operations effectively and
-            reliably.
-          </p>
-        </div>
-
-        <div class="info-blocks" id="business-block">
-          <h3>BUSINESS</h3>
-          <div class="blur-load">
-            <img loading="lazy" src={Business.src} alt="briefcase.png" />
-          </div>
-          <p>
-            The Business Team drives our mission forward by managing finances,
-            securing sponsorships, and handling marketing. Just like our rover
-            navigates challenges, we strategize to secure resources and maintain
-            a strong public presence.
-          </p>
-        </div>
-      </div>
-    </section>
-    <section class="content-container" id="index-tertiary-content">
-      <div class="container">
-        <h1>SPONSORS</h1>
-        <h1 class="" id="bronze-medal">BRONZE</h1>
-      </div>
-
-      <div class="image-block">
-        <div class="blur-load">
-          <a href="https://www.colabsoftware.com/"
-            ><img
-              loading="lazy"
-              src={Colab.src}
-              alt="colab.png"
-              id="colab"
-            /></a
-          >
-          <a href="https://pegnl.ca/"
-            ><img
-              loading="lazy"
-              src={Pegnl.src}
-              alt="pegnl.svg"
-              id="pegnl"
-            /></a
-          >
-        </div>
-      </div>
-    </section>
     <Footer />
   </body>
 </html>
