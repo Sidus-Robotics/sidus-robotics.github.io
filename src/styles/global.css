@@ -5,10 +5,11 @@
 
 video {
   pointer-events: none !important;
+  /* background-color: transparent !important; 
+   */
+  background-color: #ffffff;  
+  object-fit: cover; 
 }
-/* video {
-  pointer-events: none;
-} */
 
 @keyframes point-down {
     from {
@@ -52,31 +53,18 @@ img {
     object-fit: cover;
 }
 
-
 .blur-load::before {
     content: '';
     position: absolute;
     inset: 0;
     animation: pulse 2.5s infinite;
-}
-
-.blur-load.loaded {
-    background-image: none;
-}
-
-.blur-load.loaded::before {
-    content: none;
-    animation: none;
+    width: 100%;
 }
 
 .blur-load {
     position: relative;
     background-size: cover;
-    background-position: center;
-}
-
-.blur-load.loaded > img{
-    opacity: 1;
+    background-position: center top;
 }
 
 .blur-load > img {
@@ -84,18 +72,27 @@ img {
     transition: opacity 750ms ease-in-out;
 }
 
-.blur-load::before {
-    max-width: max-content;
+.blur-load.loaded::before {
+    content: none;
+    animation: none;
 }
 
-html {
-    height: -webkit-fill-available;
+.blur-load.loaded {
+    background-image: none;
+}
+
+.blur-load.loaded > img{
+    opacity: 1;
 }
 
 .adlam-display-regular {
   font-family: "ADLaM Display", system-ui;
   font-weight: 400;
   font-style: normal;
+}
+
+html {
+    height: -webkit-fill-available;
 }
 
 
@@ -140,7 +137,7 @@ h3 {
 }
 
 .content-container h1 {
-    display: black;
+    display: flex;
     justify-content: center;
     padding-top: 100px;
 }

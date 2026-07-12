@@ -6,11 +6,11 @@
 } 
 
 #eta {
-    font-size: 2rem;
+    font-size: 4rem;
 }
 
 #countdown {
-    font-size: 2rem;
+    font-size: 5rem;
     letter-spacing: 10px;
     padding: 0;
     margin: auto;
@@ -19,7 +19,7 @@
 }
 
 #date-timer {
-    font-size: 1rem;
+    font-size: 2rem;
     padding: 0;
     word-spacing: 2vmax;
     opacity: 0;
@@ -28,9 +28,16 @@
 }
 
 @media only screen and (max-width: 1200px) {
-    h1#countdown {
+    #countdown {
         text-align: center;
         font-size: 2vmax;
         margin: 0 10px 0 10px;
+    }
+    #eta {
+    font-size: 1.75rem;
+
+    }
+    #date-timer {
+    font-size: .75rem;
     }
 }

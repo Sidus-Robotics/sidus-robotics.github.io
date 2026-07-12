@@ -7,7 +7,6 @@ var x = setInterval(function() {
         }   
     }
       
-    
     const observer = new IntersectionObserver(intersectionCallback);
     
     const items = document.querySelectorAll('.blur-load.loaded');

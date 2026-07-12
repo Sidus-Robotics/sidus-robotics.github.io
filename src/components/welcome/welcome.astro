@@ -7,7 +7,7 @@ import "./welcome.css";
 
 <section id="welcome-section">
   <div id="logo-container">
-    <div class="blur-load">
+    <div>
       <img
         loading="lazy"
         src={FullLogo.src}
@@ -18,7 +18,11 @@ import "./welcome.css";
   </div>
 
   <div id="video-container">
-    <video id="background-video" autoplay muted playsinline loop controls disablepictureinpicture controlslist="nodownload">
+    <video id="background-video" 
+    autoplay muted playsinline 
+    loop controls disablepictureinpicture
+    controlslist="nodownload"
+    preload="none">
       <source src={Video} type="video/mp4" />
     </video>
   </div>
