@@ -23,8 +23,11 @@
 }
 
 #proud-sponsor {
+    padding: 0;
+    position: relative;
     text-align: center;
     letter-spacing: 10px;
+    margin-bottom: 100px;
 }
 
 #sponsors-section {

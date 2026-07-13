@@ -31,14 +31,14 @@
 @media only screen and (max-width: 1200px) {
     #countdown {
         text-align: center;
-        font-size: 2vmax;
+        font-size: 2rem;
         margin: 0 10px 0 10px;
     }
     #eta {
-    font-size: 1.75rem;
+    font-size: 2rem;
 
     }
     #date-timer {
-    font-size: .75rem;
+    font-size: 0.75rem;
     }
 }

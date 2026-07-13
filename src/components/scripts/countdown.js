@@ -1,4 +1,7 @@
-var countDownDate = new Date("Aug 7, 2027 00:00:00").getTime();
+var date = "Aug 7, 2027";
+var countDownDate = new Date(`${date} 00:00:00`).getTime();
+
+// TODO: Make this look better.
 
 var x = setInterval(function() {
 
@@ -54,10 +57,18 @@ var x = setInterval(function() {
     }
 
     // Really gotta do this a better way.
+    var countDown = document.getElementById("countdown");
+    var dateTimer = document.getElementById("date-timer");
+
 
     // Display the result in the element with id="countdown"
-    document.getElementById("countdown").innerHTML = `${weeks} : ${days} : ${hours} : ${minutes} : ${seconds}`;
-    document.getElementById("date-timer").innerHTML = `${w}  ${d}  ${h}  ${m}  ${s}`;
+    countDown.innerHTML = `${weeks} : ${days} : ${hours} : ${minutes} : ${seconds}`;
+    dateTimer.innerHTML = `${w}  ${d}  ${h}  ${m}  ${s}`;
+    
+    if (  window.innerWidth < 600) {
+        countDown.innerHTML = `${date}`;
+        dateTimer.innerHTML = "";
+    }
 
     // If the count down is finished, write some text
     if (difference < 0) {

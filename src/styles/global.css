@@ -10,6 +10,9 @@ video {
   background-color: transparent;  
   object-fit: cover; 
 }
+video::-webkit-media-controls-enclosure {
+     visibility: visible;
+}
 
 @keyframes point-down {
     from {
