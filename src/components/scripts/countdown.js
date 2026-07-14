@@ -1,4 +1,4 @@
-var date = "Aug 7, 2027";
+var date = "Aug 7, 2026";
 var countDownDate = new Date(`${date} 00:00:00`).getTime();
 
 // TODO: Make this look better.
@@ -8,15 +8,17 @@ var x = setInterval(function() {
   // Get today's date and time
     var now = new Date().getTime();
 
-    var difference = countDownDate - now;
+    var currentTime = countDownDate - now;
 
-    var weeks = Math.floor(difference / (1000 * 60 * 60 * 24 * 7))
-    var days = Math.floor((difference % (1000 * 60 * 60 * 24 * 7)) / (1000 * 60 * 60 * 24));
-    var hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-    var minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
-    var seconds = Math.floor((difference % (1000 * 60)) / 1000);
+    var months = Math.floor(currentTime / (1000 * 60 *60 * 24 * 7 * 4))
+    var weeks = Math.floor(currentTime / (1000 * 60 * 60 * 24 * 7))
+    var days = Math.floor((currentTime % (1000 * 60 * 60 * 24 * 7 * 4)) / (1000 * 60 * 60 * 24));
+    var hours = Math.floor((currentTime % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    var minutes = Math.floor((currentTime % (1000 * 60 * 60)) / (1000 * 60));
+    var seconds = Math.floor((currentTime % (1000 * 60)) / 1000);
 
     var times = {
+        months: months,
         weeks: weeks,
         days: days,
         hours: hours,
@@ -24,7 +26,40 @@ var x = setInterval(function() {
         seconds: seconds
     };
 
-    // Make this look better
+    var timeDescriptors = {
+        months: "MONTH",
+        weeks: "WEEK",
+        days: "DAY",
+        hours: "HOUR",
+        minutes: "MINUTE",
+        seconds: "SECOND"
+    }
+
+    // for (const [key, val] of Object.entries(times)) {
+    //     // console.log(`${timeDescriptors[key]}`)
+    //     if ( times[key] < 0) {
+    //         console.log(times[key]);
+    //         timeDescriptors[key] = `${val}S`;
+    //     }
+    // }
+
+    for (const [key, val] of Object.entries(times)) {
+        // console.log(`${times[key]}`)
+        if ( times[key] % 10 == times[key]) {
+            times[key] = `0${val}`;
+        }
+    }
+
+    
+
+        // Make this look better
+
+
+    if (months == 1) {
+        var mon = " MONTH "
+    } else {
+        var mon = " MONTHS "
+    }
 
     if (weeks == 1) {
         var w = " WEEK "
@@ -56,14 +91,16 @@ var x = setInterval(function() {
         var s = " SECONDS "
     }
 
+
+     
     // Really gotta do this a better way.
     var countDown = document.getElementById("countdown");
     var dateTimer = document.getElementById("date-timer");
 
 
     // Display the result in the element with id="countdown"
-    countDown.innerHTML = `${weeks} : ${days} : ${hours} : ${minutes} : ${seconds}`;
-    dateTimer.innerHTML = `${w}  ${d}  ${h}  ${m}  ${s}`;
+    countDown.innerHTML = `${times.months} : ${times.days} : ${times.hours} : ${times.minutes} : ${times.seconds}`;
+    dateTimer.innerHTML = `${mon}  ${d}  ${h}  ${m}  ${s}`;
     
     if (  window.innerWidth < 600) {
         countDown.innerHTML = `${date}`;
@@ -71,7 +108,7 @@ var x = setInterval(function() {
     }
 
     // If the count down is finished, write some text
-    if (difference < 0) {
+    if (currentTime < 0) {
         clearInterval(x);
         document.getElementById("countdown").innerHTML = "COMPETITION DAY";
     }
