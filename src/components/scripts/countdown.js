@@ -94,6 +94,7 @@ var x = setInterval(function() {
 
      
     // Really gotta do this a better way.
+    var eta = document.getElementById("eta");
     var countDown = document.getElementById("countdown");
     var dateTimer = document.getElementById("date-timer");
 
@@ -110,6 +111,8 @@ var x = setInterval(function() {
     // If the count down is finished, write some text
     if (currentTime < 0) {
         clearInterval(x);
-        document.getElementById("countdown").innerHTML = "COMPETITION DAY";
+        eta.innerHTML = "";
+        countDown.innerHTML = "DEMONSTRATION DAY";
+        dateTimer.innerHTML = "DEMO IN PROGRESS";
     }
 }, 50);
