@@ -104,7 +104,11 @@ body {
     color: white;
     /* font-family: "IBM Plex Mono";
      */
-     font-family: "ADLaM Display";
+    /* font-family: "ADLaM Display"; */
+    font-family: "Stack Sans Headline", sans-serif;
+    font-optical-sizing: auto;
+    /* font-weight: <weight>; */
+    font-style: normal;
     background-color: black;
     width: 100%;
     overflow-x:hidden;
