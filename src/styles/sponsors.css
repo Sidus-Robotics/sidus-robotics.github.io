@@ -157,12 +157,15 @@
 }
 .text-content {
   position: absolute;
+  /* width: 100%; */
   /* translate: 0.5vmax 0; */
   z-index: 1;
 }
 
 .text-content h3, ul li {
-  padding: 0 0 1vmax 0;
+  font-weight: bold;
+  text-align: left;
+  padding: 0 1vmax 1vmax 0;
 }
 
 .banner {
@@ -180,12 +183,6 @@
   filter: drop-shadow(0 0 2vmax black);
 }
 
-.banner ul li {
-  font-weight: bold;
-  text-align: left;
-  /* max-width: 12vw; */
-  width: 285px;
-}
 #sponsors-secondary-content h1 {
   text-align: center;
   color: white;
