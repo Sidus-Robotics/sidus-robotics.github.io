@@ -157,7 +157,7 @@
 }
 .text-content {
   position: absolute;
-  translate: 0.5vmax 0;
+  /* translate: 0.5vmax 0; */
   z-index: 1;
 }
 
