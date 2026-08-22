@@ -1,6 +1,5 @@
 var date = "Aug 7, 2026";
 var countDownDate = new Date(`${date} 00:00:00`).getTime();
-
 // TODO: Make this look better.
 
 var x = setInterval(function() {
@@ -107,12 +106,19 @@ var x = setInterval(function() {
         countDown.innerHTML = `${date}`;
         dateTimer.innerHTML = "";
     }
-
+    console.log(currentTime/1000 )
     // If the count down is finished, write some text
-    if (currentTime < 0) {
-        clearInterval(x);
+    if (0 > currentTime/1000 & currentTime/1000 > -1 * (86400)) {
+        
+        // clearInterval(x);
         eta.innerHTML = "";
         countDown.innerHTML = "DEMONSTRATION DAY";
         dateTimer.innerHTML = "DEMO IN PROGRESS";
+    }
+    else if (now > countDownDate) {
+        clearInterval(x);
+        eta.innerHTML = "";
+        countDown.innerHTML = "DEMONSTRATION COMPLETED";
+        dateTimer.innerHTML = "ROCKING AND ROLLING";
     }
 }, 50);
